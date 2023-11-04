@@ -9,11 +9,10 @@ export default function useKey(key: string, callback: (e: KeyboardEvent) => void
 
     useEffect(() => {
         function handleKeyPress(e: KeyboardEvent) {
-            if(e.code === key) {
+            if(e.key === key) {
                 callbackRef.current(e);
             }
         }
-
 
         document.addEventListener("keypress", handleKeyPress);
         return () => document.removeEventListener("keypress", handleKeyPress);

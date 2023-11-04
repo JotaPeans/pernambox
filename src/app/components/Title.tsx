@@ -9,7 +9,7 @@ const Title = ({ ...props }: TitleProps) => {
     return (
         <h1
             {...props}
-            className={tw("", props.className)}
+            className={tw("text-2xl font-semibold text-zinc-600", props.className)}
         >
             {props.children}
         </h1>
