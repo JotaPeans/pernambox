@@ -9,6 +9,8 @@ import Button from "@/app/components/Button";
 import { ChevronDown, ChevronUp, ChevronLeft, Play, Pause } from "lucide-react";
 import Title from "@/app/components/Title";
 
+import useKey from "@/hooks/useKey";
+
 const Player = ({ params }: { params: { id: string } }) => {
     const router = useRouter();
     const songData = data.find(d => d.id === parseInt(params.id) && d.type === "song");
@@ -22,6 +24,23 @@ const Player = ({ params }: { params: { id: string } }) => {
     useEffect(() => {
         setShowPlayer(true);
     }, []);
+
+    function handleVolume(dir: "up" | "down") {
+        switch(dir) {
+            case "up":
+                setVolume(volume => parseFloat((volume += 0.05).toFixed(2)))
+                break;
+            case "down":
+                setVolume(volume => parseFloat((volume -= 0.05).toFixed(2)))
+                break;
+        }
+    }
+
+    useKey("w", () => handleVolume("up")); // tecla pra ir pra cima
+    useKey("s", () => handleVolume("down")); // tecla pra ir pra baixo
+
+    useKey("a", () => router.push("/")); // tecla pra ir pra direita
+    useKey("Enter", () => setPlaying(playing => !playing)); // tecla pra ir pra esquerda
 
     return (
         <main className="w-full min-h-screen bg-zinc-200 flex items-center justify-center gap-10">
