@@ -15,9 +15,12 @@ const App = () => {
     const songsData = data.filter(d => d.type === "song");
     const artsData = data.filter(d => d.type === "art");
 
-    const refs = {
+    const refs = typeof document !== "undefined" ? {
         song: document.getElementsByClassName("song"),
         art: document.getElementsByClassName("art"),
+    } : {
+        song: [],
+        art: []
     }
 
     const [ sectionSelected, setSectionSelected ] = useState<"song" | "art">("song");
