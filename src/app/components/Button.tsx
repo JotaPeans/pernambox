@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from "react";
 import { twMerge as tw } from "tailwind-merge";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-
+    
 }
 
 const Button = ({ ...props }: ButtonProps) => {

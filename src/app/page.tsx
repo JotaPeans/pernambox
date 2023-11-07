@@ -1,67 +1,73 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react";
-import { useRouter } from "next/navigation"
-import Header from "./components/Header";
-import Title from "./components/Title";
-import CardButton from "./components/CardButton";
+import { Shuffle } from "lucide-react";
 
 import data from "@/lib/data";
 import useKey from "@/hooks/useKey";
+import Section from "./components/Section";
+import Button from "./components/Button";
 
 const App = () => {
-    const router = useRouter();
-
     const songsData = data.filter(d => d.type === "song");
     const artsData = data.filter(d => d.type === "art");
 
     const refs = typeof document !== "undefined" ? {
+        surprise: document.getElementsByClassName("surprise"),
         song: document.getElementsByClassName("song"),
         art: document.getElementsByClassName("art"),
     } : {
+        surprise: [],
         song: [],
         art: []
     }
 
-    const [ sectionSelected, setSectionSelected ] = useState<"song" | "art">("song");
-    const [ dataSelected, setDataSelected ] = useState(0);
+    const refKeys = Object.keys(refs);
+
+    const [ sectionSelected, setSectionSelected ] = useState<"surprise" | "song" | "art">("song");
+    const dataSelected = useRef(0);
 
     useEffect(() => {
-        (refs[sectionSelected][0] as any).focus();
+        (refs[sectionSelected][0] as any)?.focus();
     }, []);
 
     function handleChangeSection(dir: "up" | "down" | "left" | "right") {
-        let selected = dataSelected;
+        const currentRefIndex = refKeys.indexOf(sectionSelected);
+        var key: typeof sectionSelected;
 
         switch(dir) {
             case "up":
-                (refs.song[0] as any).focus();
-                setSectionSelected("song");
-                setDataSelected(0);
+                key = refKeys[currentRefIndex - 1] as typeof sectionSelected;
+
+                (refs[key][0] as any).focus();
+
+                setSectionSelected(key);
+                dataSelected.current = 0;
                 break;
                 
             case "down":
-                (refs.art[0] as any).focus();
-                setSectionSelected("art");
-                setDataSelected(0);
+                key = refKeys[currentRefIndex + 1] as typeof sectionSelected;
+
+                (refs[key][0] as any).focus();
+
+                setSectionSelected(key);
+                dataSelected.current = 0;
                 break;
 
             case "left":
-                if(dataSelected > 0) {
-                    selected--;
-                    setDataSelected(selected);
+                if(dataSelected.current > 0) {
+                    dataSelected.current--;
 
-                    (refs[sectionSelected][selected] as any).focus();
+                    (refs[sectionSelected][dataSelected.current] as any).focus();
                 }
 
                 break;
 
             case "right":
-                if(dataSelected < ( refs[sectionSelected].length - 1 )) {
-                    selected++;
-                    setDataSelected(selected);
+                if(dataSelected.current < ( refs[sectionSelected].length - 1 )) {
+                    dataSelected.current++
 
-                    (refs[sectionSelected][selected] as any).focus();
+                    (refs[sectionSelected][dataSelected.current] as any).focus();
                 }
 
                 break;
@@ -76,35 +82,23 @@ const App = () => {
 
     return (
         <main className="flex flex-col gap-10 w-full min-h-screen bg-zinc-200">
-            <Header/>
+            <h1 className="text-center text-3xl font-semibold text-zinc-700 mt-5">O que você quer descobrir hoje?</h1>
 
-            <section className="px-8 flex flex-col gap-4 w-full">
-                <Title>Músicas</Title>
+            <div className="px-8 flex gap-5 items-center">
+                <Button className="surprise max-w-fit p-3 outline-none focus:ring-4 ring-zinc-700 shadow-lg transition-all duration-300">
+                    <Shuffle/>
+                </Button>
 
-                <div className="w-full flex items-center gap-5">
-                    {
-                        songsData.map((d, k) => (
-                            <CardButton className="song focus:outline-none focus:ring-4 ring-orange-500" key={k} onClick={() => router.push(`/view/player/${d.id}`)}>
-                                {d.name}
-                            </CardButton>
-                        ))
-                    }
+                <div className="font-medium">
+                    <h1 className="text-xl text-zinc-700">Surpreenda-me</h1>
+                    <h1 className="text-sm text-zinc-600">Músicas da semana</h1>
                 </div>
-            </section>
+            </div>
 
-            <section className="px-8 flex flex-col gap-4 w-full">
-                <Title>Artes</Title>
+            <Section title="Músicas" data={songsData} route="/view/player/" type="song"/>
 
-                <div className="w-full flex items-center gap-5">
-                    {
-                        artsData.map((a, k) => (
-                            <CardButton className="art focus:outline-none focus:ring-4 ring-orange-500" key={k} onClick={() => router.push(`/view/art/${a.id}`)}>
-                                {a.name}
-                            </CardButton>
-                        ))
-                    }
-                </div>
-            </section>
+            <Section title="Artes" data={artsData} route="/view/art/" type="art"/>
+
         </main>
     );
 }

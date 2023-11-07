@@ -28,10 +28,10 @@ const Player = ({ params }: { params: { id: string } }) => {
     function handleVolume(dir: "up" | "down") {
         switch(dir) {
             case "up":
-                setVolume(volume => parseFloat((volume += 0.05).toFixed(2)))
+                setVolume(volume => volume < 1 ? parseFloat((volume += 0.05).toFixed(2)) : volume);
                 break;
             case "down":
-                setVolume(volume => parseFloat((volume -= 0.05).toFixed(2)))
+                setVolume(volume => volume > 0 ? parseFloat((volume -= 0.05).toFixed(2)) : volume);
                 break;
         }
     }

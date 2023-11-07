@@ -9,7 +9,7 @@ const CardButton = ({ ...props }: CardButtonProps) => {
     return (
         <button
             {...props}
-            className={tw("w-40 h-40 bg-white shadow-md rounded-2xl p-2", props.className)}
+            className={tw("min-w-[10rem] h-40 bg-white shadow-md rounded-2xl p-2", props.className)}
         >   
             <div className="w-full h-full flex items-center justify-center rounded-xl">
                 {props.children}

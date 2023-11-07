@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
+import Header from "./components/Header"
 
 export const metadata: Metadata = {
   title: "Pernambox",
@@ -18,8 +19,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </head>
-      <body>
-        {children}
+      <body className="pt-[112px] bg-zinc-200">
+        <Header/>
+        
+        <div className="max-w-5xl mx-auto">
+          {children}
+        </div>
       </body>
     </html>
   )

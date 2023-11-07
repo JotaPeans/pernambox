@@ -1,4 +1,4 @@
-type TData = {
+export type TData = {
     id: number
     name: string
     type: "song" | "art"
