@@ -10,7 +10,7 @@ const Header = ({ ...props }: Header) => {
     return (
         <div
             {...props}
-            className={tw("flex justify-center p-8 items-center fixed top-0 w-screen bg-zinc-200 shadow-lg", props.className)}
+            className={tw("flex justify-center p-8 items-center fixed top-0 w-screen bg-zinc-200 shadow-lg z-50", props.className)}
         >
             {/* <h1 className="text-3xl font-semibold text-zinc-600">Pernam<span className="font-bold text-orange-500">Box</span></h1>
 

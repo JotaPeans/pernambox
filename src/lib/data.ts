@@ -1,34 +1,37 @@
-export type TData = {
-    id: number
+export type SongProps = {
     name: string
-    type: "song" | "art"
-    url?: string
-    image?: string
     author: string
+    url: string
+    image?: string
 }
 
-const data: TData[] = [
+export const songs: SongProps[] = [
     {
-        id: 1,
-        name: "Song to you",
-        type: "song",
-        url: "https://www.youtube.com/watch?v=3PLOb1c3nUI&ab_channel=VictoriousVEVO",
-        author: "Victoria Justice"
+        name: "Sam Day Baby",
+        author: "NoCopyrightSounds",
+        url: "https://www.youtube.com/watch?v=e5DIBb6A02k&ab_channel=NoCopyrightSounds",
+        image: "https://t3.ftcdn.net/jpg/04/79/95/36/360_F_479953686_TXbuY02ZzcLXf517UBPS7EAglP6Kb1D3.jpg"
     },
     {
-        id: 2,
-        name: "Stuck",
-        type: "song",
-        url: "https://www.youtube.com/watch?v=lCWUXiMhQ70&ab_channel=BigTimeRush-Topic",
-        author: "Big Time Rush"
+        name: "Joxion RPM",
+        author: "NoCopyrightSounds",
+        url: "https://www.youtube.com/watch?v=4qLPHVOR8po&ab_channel=NCSArcade",
+        image: "https://t3.ftcdn.net/jpg/04/79/95/36/360_F_479953686_TXbuY02ZzcLXf517UBPS7EAglP6Kb1D3.jpg"
     },
     {
-        id: 3,
-        name: "Painel Frei Caneca",
-        type: "art",
-        url: "https://www.aponte.com.br/site/wp-content/uploads/2016/02/16592427410_46d006df11_o-1024x683.jpg",
-        author: "Cícero Dias"
+        name: "4URA and VinDon",
+        author: "NoCopyrightSounds",
+        url: "https://www.youtube.com/watch?v=tlnIQoxxrhY&ab_channel=NoCopyrightSounds",
+        image: "https://t3.ftcdn.net/jpg/04/79/95/36/360_F_479953686_TXbuY02ZzcLXf517UBPS7EAglP6Kb1D3.jpg"
     },
 ]
 
-export default data;
+export const singers = [
+    {
+        name: "NoCopyrightSounds",
+        image: "https://wallpaperset.com/w/full/6/8/7/393625.jpg",
+        about: [
+            "NCS (NoCopyrightSounds) is a UK-based record label, YouTube channel, and cross-platform creative and music community specialising in releasing and promoting free-to-use electronic music, and dedicated to providing opportunity for the next generation of artist and creators. NCS started as a YouTube channel in 2011 by Billy Woodford, who identified an opportunity to showcase music & artists he loved while simultaneously providing a comprehensive catalogue of contemporary electronic music for creators.",
+        ]
+    }
+]

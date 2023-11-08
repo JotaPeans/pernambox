@@ -1,32 +1,32 @@
 "use client"
 
-import { useEffect, useState, useRef } from "react";
-import { Shuffle } from "lucide-react";
-
-import { singers } from "@/lib/data";
+import BackButton from "@/app/components/BackButton";
+import Section from "@/app/components/Section";
 import useKey from "@/hooks/useKey";
-import Section from "./components/Section";
-import Button from "./components/Button";
+import { songs as songsData, singers } from "@/lib/data";
+import { useEffect, useRef, useState } from "react";
 
-const App = () => {
+const Singer = ({ params }: { params: { singerName: string } }) => {
+    const songs = songsData.filter(s => s.author.toLowerCase() === params.singerName.toLowerCase());
+    const singer = singers.find(s => s.name.toLowerCase() === params.singerName.toLowerCase());
 
     const refs = typeof document !== "undefined" ? {
-        surprise: document.getElementsByClassName("surprise"),
-        singers: document.getElementsByClassName("singers"),
+        back: document.getElementsByClassName("back"),
+        songs: document.getElementsByClassName("song"),
     } : {
-        surprise: [],
-        singers: [],
+        back: [],
+        songs: [],
     }
 
     const refKeys = Object.keys(refs);
 
-    const [ sectionSelected, setSectionSelected ] = useState<keyof typeof refs>("singers");
+    const [ sectionSelected, setSectionSelected ] = useState<keyof typeof refs>("songs");
     const dataSelected = useRef(0);
 
     useEffect(() => {
-        (refs[sectionSelected][0] as any)?.focus();
+        (refs[sectionSelected][0] as any).focus();
     }, []);
-
+    
     function handleChangeSection(dir: "up" | "down" | "left" | "right") {
         const currentRefIndex = refKeys.indexOf(sectionSelected);
         var key: typeof sectionSelected;
@@ -79,26 +79,20 @@ const App = () => {
     useKey("d", () => handleChangeSection("right")); // tecla pra ir pra esquerda
 
     return (
-        <main className="flex flex-col gap-10 w-full min-h-full bg-zinc-200 px-8">
-            <h1 className="text-center text-3xl font-semibold text-zinc-700 mt-5">O que você quer descobrir hoje?</h1>
+        <main className="w-full min-h-full bg-zinc-200 flex flex-col justify-center gap-10 pt-5 p-12 z-0">
+            <BackButton backUrl="/"/>
 
-            <div className="flex gap-5 items-center">
-                <Button className="surprise max-w-fit p-3 outline-none focus:ring-4 ring-zinc-700 shadow-lg transition-all duration-300">
-                    <Shuffle/>
-                </Button>
+            <section className="text-justify">
+                <img src={singer?.image} alt={singer?.name} className="h-56 rounded-lg float-left mr-5 mb-2"/>
 
-                <div className="font-medium">
-                    <h1 className="text-xl text-zinc-700">Surpreenda-me</h1>
-                    <h1 className="text-sm text-zinc-600">Músicas da semana</h1>
-                </div>
-            </div>
+                {singer?.about.map((txt, k) => (
+                    <p key={k} className="text-justify font-medium text-zinc-600">{txt}</p>
+                ))}
+            </section>
 
-            <Section title="Artistas" data={singers} route="/singer/" type="singers"/>
-
-            {/* <Section title="Artes" data={artsData} route="/view/art/" type="art"/> */}
-
+            <Section data={songs} title="Conheça as músicas" type="song" route="/view/player/" overflow="wrap"></Section>
         </main>
     );
 }
  
-export default App;
+export default Singer;

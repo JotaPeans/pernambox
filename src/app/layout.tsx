@@ -19,10 +19,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       </head>
-      <body className="pt-[112px] bg-zinc-200">
+      <body className="bg-zinc-200">
         <Header/>
         
-        <div className="max-w-5xl mx-auto">
+        <div className="mt-28 max-w-5xl mx-auto">
           {children}
         </div>
       </body>
