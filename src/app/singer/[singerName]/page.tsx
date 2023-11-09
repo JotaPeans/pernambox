@@ -1,12 +1,13 @@
 "use client"
 
+import { useEffect, useRef, useState } from "react";
+import handleChangeSection from "@/lib/functions/handleChangeSection";
+
+import { songs as songsData, singers } from "@/lib/data";
+import { Dirs } from "@/lib/types";
 import BackButton from "@/app/components/BackButton";
 import Section from "@/app/components/Section";
 import useKey from "@/hooks/useKey";
-import { songs as songsData, singers } from "@/lib/data";
-import handleChangeSection from "@/lib/functions/handleChangeSection";
-import { Dirs } from "@/lib/types";
-import { useEffect, useRef, useState } from "react";
 
 const Singer = ({ params }: { params: { singerName: string } }) => {
     const songs = songsData.filter(s => s.author.toLowerCase() === params.singerName.toLowerCase());

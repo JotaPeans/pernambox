@@ -1,14 +1,14 @@
 "use client"
 
+import handleChangeSection from "@/lib/functions/handleChangeSection";
 import { useEffect, useState, useRef } from "react";
 import { Shuffle } from "lucide-react";
 
-import { singers } from "@/lib/data";
-import useKey from "@/hooks/useKey";
 import Section from "./components/Section";
 import Button from "./components/Button";
+import useKey from "@/hooks/useKey";
+import { singers } from "@/lib/data";
 import { Dirs } from "@/lib/types";
-import handleChangeSection from "@/lib/functions/handleChangeSection";
 
 const App = () => {
 

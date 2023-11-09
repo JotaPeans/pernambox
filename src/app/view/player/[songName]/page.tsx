@@ -2,15 +2,15 @@
 
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
-import { ChevronLeft, Play, Pause } from "lucide-react";
+import { Play, Pause } from "lucide-react";
+import { OnProgressProps } from "react-player/base";
 import ReactPlayer from "react-player"
 
-import { songs, singers } from "@/lib/data";
-import Button from "@/app/components/Button";
 
+import { songs, singers } from "@/lib/data";
 import useKey from "@/hooks/useKey";
-import { OnProgressProps } from "react-player/base";
 import BackButton from "@/app/components/BackButton";
+import Button from "@/app/components/Button";
 
 const Player = ({ params }: { params: { songName: string } }) => {
     const router = useRouter();
