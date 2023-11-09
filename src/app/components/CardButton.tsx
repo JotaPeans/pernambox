@@ -15,7 +15,7 @@ const CardButton = ({ img, name, ...props }: CardButtonProps) => {
             <div className="w-full h-full flex flex-col items-center justify-center gap-3 rounded-xl">
                 { img && <img src={img} alt={name} className="h-full object-cover object-left rounded-lg"/> }
 
-                { name && <h1 className="font-semibold text-zinc-700">{ name }</h1> }
+                { name && <h1 className="font-semibold text-zinc-700 capitalize">{ name }</h1> }
                 {props.children}
             </div>
         </button>

@@ -7,7 +7,7 @@ import { Shuffle } from "lucide-react";
 import Section from "./components/Section";
 import Button from "./components/Button";
 import useKey from "@/hooks/useKey";
-import { singers } from "@/lib/data";
+import { singers, musicGenres } from "@/lib/data";
 import { Dirs } from "@/lib/types";
 
 const App = () => {
@@ -15,9 +15,11 @@ const App = () => {
     const refs = typeof document !== "undefined" ? {
         surprise: document.getElementsByClassName("surprise"),
         singers: document.getElementsByClassName("singers"),
+        genres: document.getElementsByClassName("genres"),
     } : {
         surprise: [],
         singers: [],
+        genres: [],
     }
 
     const refKeys = Object.keys(refs);
@@ -60,7 +62,7 @@ const App = () => {
 
             <Section title="Artistas" data={singers} route="/singer/" type="singers"/>
 
-            {/* <Section title="Artes" data={artsData} route="/view/art/" type="art"/> */}
+            <Section title="Gêneros Musicais" data={musicGenres} route="/genre/" type="genres"/>
 
         </main>
     );

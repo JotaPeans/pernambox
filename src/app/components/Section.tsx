@@ -3,13 +3,13 @@
 import { HTMLAttributes } from "react";
 import CardButton from "./CardButton";
 import Title from "./Title";
-import { SongProps, singers } from "@/lib/data";
+import { GenresProps, SingersProps, SongProps } from "@/lib/data";
 import { twMerge as tw } from "tailwind-merge"
 import { useRouter } from "next/navigation";
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
     title: string
-    data: SongProps[] | typeof singers
+    data: SongProps[] | SingersProps[] | GenresProps[]
     route: string
     type: string
     overflow?: "scroll" | "wrap"

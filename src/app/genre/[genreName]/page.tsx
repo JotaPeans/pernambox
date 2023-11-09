@@ -1,22 +1,22 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react";
-import handleChangeSection from "@/lib/functions/handleChangeSection";
 
-import { songs as songsData, singers } from "@/lib/data";
-import { Dirs } from "@/lib/types";
+import handleChangeSection from "@/lib/functions/handleChangeSection";
 import BackButton from "@/app/components/BackButton";
 import Section from "@/app/components/Section";
 import useKey from "@/hooks/useKey";
+import { singers as singersData, musicGenres } from "@/lib/data";
+import { Dirs } from "@/lib/types";
 import Title from "@/app/components/Title";
 
-const Singer = ({ params }: { params: { singerName: string } }) => {
-    const songs = songsData.filter(s => s.author.toLowerCase() === params.singerName.toLowerCase());
-    const singer = singers.find(s => s.name.toLowerCase() === params.singerName.toLowerCase());
+const Genre = ({ params }: { params: { genreName: string } }) => {
+    const singers = singersData.filter(s => s.genre === params.genreName);
+    const musicGenre = musicGenres.find(m => m.name === params.genreName);
 
     const refs = typeof document !== "undefined" ? {
         back: document.getElementsByClassName("back"),
-        songs: document.getElementsByClassName("song"),
+        songs: document.getElementsByClassName("singers"),
     } : {
         back: [],
         songs: [],
@@ -49,19 +49,19 @@ const Singer = ({ params }: { params: { singerName: string } }) => {
         <main className="w-full min-h-full bg-zinc-200 flex flex-col justify-center gap-10 pt-5 p-12 z-0">
             <BackButton backUrl="/"/>
 
-            <Title className="text-center text-4xl">{ singer?.name }</Title>
+            <Title className="text-center text-4xl">{ musicGenre?.name }</Title>
 
             <section className="text-justify">
-                <img src={singer?.image} alt={singer?.name} className="h-56 rounded-lg float-left mr-5 mb-2"/>
+                <img src={musicGenre?.image} alt={musicGenre?.name} className="h-56 rounded-lg float-left mr-5 mb-2"/>
 
-                {singer?.about.map((txt, k) => (
+                {musicGenre?.about.map((txt, k) => (
                     <p key={k} className="text-justify font-medium text-zinc-600 mb-3">{txt}</p>
                 ))}
             </section>
 
-            <Section data={songs} title="Conheça as músicas" type="song" route="/view/player/" overflow="wrap"></Section>
+            <Section title="Artistas" data={singers} route="/singer/" type="singers"/>
         </main>
     );
 }
  
-export default Singer;
+export default Genre;
