@@ -77,15 +77,15 @@ const Player = ({ params }: { params: { songName: string } }) => {
     useKey("Enter", () => setPlaying(playing => !playing)); // tecla pra ir pra esquerda
 
     return (
-        <main className="w-full min-h-full bg-zinc-200 flex flex-col justify-center gap-10 pt-5 p-12 z-0">
+        <main className="w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
             
             <div className="flex items-center gap-2">
-                <BackButton backUrl={`/singer/${songData?.author}`} keyToBack='a'/>
+                <BackButton className="bg-custom-green" backUrl={`/singer/${songData?.author}`} keyToBack='a'/>
                 <p className="font-medium text-zinc-600">Botão da esquerda para voltar!</p>
             </div>
 
             <section className="relative flex items-center justify-center gap-5 w-full">
-                <div className="flex max-w-fit flex-col items-center justify-center gap-5 p-5 bg-white rounded-2xl">
+                <div className="flex max-w-fit flex-col items-center justify-center gap-5 p-5 shadow-lg bg-white/30 rounded-2xl">
                     <div className="rounded-xl overflow-hidden hidden">
                         { showPlayer && currentTime.current ? <ReactPlayer
                             url={songData?.url}
@@ -137,7 +137,7 @@ const Player = ({ params }: { params: { songName: string } }) => {
                 </div>
             </section>
 
-            <section className="font-medium text-zinc-600">
+            <section className="font-semibold text-zinc-600">
                 {singer?.about.map((txt, k) => (
                     <p key={k} className="text-justify">{txt}</p>
                 ))}

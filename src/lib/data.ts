@@ -24,7 +24,7 @@ export type SingersProps = {
 export const songs: SongProps[] = [
     {
         name: "Sam Day Baby",
-        author: "NoCopyrightSounds",
+        author: "NoCopyrightSounds", 
         genre: "eletronica",
         url: "https://www.youtube.com/watch?v=e5DIBb6A02k&ab_channel=NoCopyrightSounds",
         image: "https://t3.ftcdn.net/jpg/04/79/95/36/360_F_479953686_TXbuY02ZzcLXf517UBPS7EAglP6Kb1D3.jpg"

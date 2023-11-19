@@ -46,8 +46,8 @@ const Singer = ({ params }: { params: { singerName: string } }) => {
     useKey("d", () => handleKey("right"));
 
     return (
-        <main className="w-full min-h-full bg-zinc-200 flex flex-col justify-center gap-10 pt-5 p-12 z-0">
-            <BackButton backUrl="/"/>
+        <main className="w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
+            <BackButton backUrl="/" className="bg-custom-green ring-offset-2"/>
 
             <Title className="text-center text-4xl">{ singer?.name }</Title>
 

@@ -45,26 +45,32 @@ const App = () => {
     useKey("a", () => handleKey("left"));
     useKey("d", () => handleKey("right"));
 
+    //  parseInt(Math.random() * (max - min) + min)
+
     return (
-        <main className="flex flex-col gap-10 w-full min-h-full bg-zinc-200 px-8">
-            <h1 className="text-center text-3xl font-semibold text-zinc-700 mt-5">O que você quer descobrir hoje?</h1>
+        <>
+            
 
-            <div className="flex gap-5 items-center">
-                <Button className="surprise max-w-fit p-3 outline-none focus:ring-4 ring-zinc-700 shadow-lg transition-all duration-300">
-                    <Shuffle/>
-                </Button>
+            <main className="flex flex-col gap-10 w-full min-h-full bg-background px-8">
+                <h1 className="text-center text-4xl font-bold text-custom-blue mt-8">O que você quer descobrir hoje?</h1>
 
-                <div className="font-medium">
-                    <h1 className="text-xl text-zinc-700">Surpreenda-me</h1>
-                    <h1 className="text-sm text-zinc-600">Músicas da semana</h1>
+                <div className="flex gap-5 items-center">
+                    <Button className="surprise max-w-fit p-3 outline-none focus:ring-4 ring-offset-2 ring-zinc-700 shadow-lg transition-all duration-300 bg-custom-green rounded-full">
+                        <Shuffle/>
+                    </Button>
+
+                    <div className="font-medium">
+                        <h1 className="text-xl font-bold text-custom-blue">Surpreenda-me</h1>
+                        <h1 className="text-sm font-bold text-custom-blue">Músicas da semana</h1>
+                    </div>
                 </div>
-            </div>
 
-            <Section title="Artistas" data={singers} route="/singer/" type="singers"/>
+                <Section title="Artistas" data={singers} route="/singer/" type="singers"/>
 
-            <Section title="Gêneros Musicais" data={musicGenres} route="/genre/" type="genres"/>
+                <Section title="Gêneros Musicais" data={musicGenres} route="/genre/" type="genres"/>
 
-        </main>
+            </main>
+        </>
     );
 }
  

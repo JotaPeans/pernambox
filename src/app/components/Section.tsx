@@ -20,18 +20,21 @@ const Section = ({ title, data, route, type, overflow = "scroll", ...props }: Se
 
     return (
         <section className={tw("flex flex-col gap-4 w-full", props.className)} { ...props }>
-            <Title>{ title }</Title>
+            <Title className="text-orange-500">{ title }</Title>
 
             <div data-overflow={overflow} className="w-full flex items-center gap-5 data-[overflow='scroll']:overflow-x-auto data-[overflow='wrap']:flex-wrap p-2">
                 {
                     data.map((d, k) => (
-                        <CardButton
-                            name={d.name}
-                            img={d.image}
-                            className={type + " outline-none focus:ring-4 ring-orange-500 transition-all duration-300"}
-                            key={k}
-                            onClick={() => router.push(`${route}${d.name.split(" ").join("-").toLowerCase()}`)}
-                        />
+                        <div key={k} className="min-w-[10rem] max-w-[14rem] min-h-[10rem] flex flex-col gap-3 justify-center items-center">
+                            <button 
+                                className={type + " outline-none focus:ring-4 ring-offset-4 ring-custom-green transition-all duration-300 rounded-lg overflow-clip"}
+                                onClick={() => router.push(`${route}${d.name.split(" ").join("-").toLowerCase()}`)}
+                            >
+                                { d.image && <img src={d.image} alt={d.name} className="h-full object-cover object-left rounded-xl"/> }
+                            </button>
+
+                            <h5 className="text-custom-blue font-semibold text-xl">{ d.name }</h5>
+                        </div>
                     ))
                 }
             </div>
