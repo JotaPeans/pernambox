@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import "./globals.css"
+
 import Header from "./components/Header"
-import OpeningScreen from "./components/OpeningScreen";
+import ScreenProvider from "./ScreenProvider"
 
 export const metadata: Metadata = {
   title: "Pernambox",
@@ -24,7 +25,9 @@ export default function RootLayout({
         <Header/>
 
         <div className="max-w-[1080px] w-full mx-auto ">
-          {children}
+          <ScreenProvider>
+            {children}
+          </ScreenProvider>
         </div>
       </body>
     </html>

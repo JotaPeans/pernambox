@@ -1,9 +1,10 @@
 "use client"
 
 import handleChangeSection from "@/lib/functions/handleChangeSection";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import { Shuffle } from "lucide-react";
 
+import { ScreenContext } from "./ScreenProvider";
 import Section from "./components/Section";
 import Button from "./components/Button";
 import useKey from "@/hooks/useKey";
@@ -12,6 +13,7 @@ import { Dirs } from "@/lib/types";
 import OpeningScreen from "./components/OpeningScreen";
 
 const App = () => {
+    const { isOpeningScreenShow, setIsOpeningScreenShow } = useContext(ScreenContext);
 
     const refs = typeof document !== "undefined" ? {
         surprise: document.getElementsByClassName("surprise"),
@@ -26,7 +28,6 @@ const App = () => {
     const refKeys = Object.keys(refs);
 
     const [ sectionSelected, setSectionSelected ] = useState("singers");
-    const [ isOpeningScreenShow, setIsOpeningScreenShow ] = useState(true);
     const dataSelected = useRef(0);
 
     useEffect(() => {
@@ -38,7 +39,7 @@ const App = () => {
     }
 
     function handleKey(dir: Dirs) {
-        if(isOpeningScreenShow) setIsOpeningScreenShow(false);
+        if(isOpeningScreenShow && setIsOpeningScreenShow) setIsOpeningScreenShow(false);
         handleChangeSection(dir, refKeys, sectionSelected, setSectionSelected, refs, dataSelected.current, handleChangeDataSelected)
     }
 
@@ -50,7 +51,7 @@ const App = () => {
 
     return (
         <>
-            <OpeningScreen isShowing={isOpeningScreenShow}/>
+            <OpeningScreen/>
 
             <main className="flex flex-col gap-10 w-full min-h-full bg-background px-8">
                 <h1 className="text-center text-4xl font-bold text-custom-blue mt-8">O que você quer descobrir hoje?</h1>

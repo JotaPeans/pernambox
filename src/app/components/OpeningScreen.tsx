@@ -1,13 +1,11 @@
 "use client"
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
+import { ScreenContext } from "../ScreenProvider";
 
-interface OpeningScreenProps {
-    isShowing: boolean
-}
-
-const OpeningScreen = ({ isShowing }: OpeningScreenProps) => {
+const OpeningScreen = () => {
+    const { isOpeningScreenShow } = useContext(ScreenContext);
     // const [ show, setShow ] = useState(isShowing);
 
     // useEffect(() => {
@@ -24,6 +22,18 @@ const OpeningScreen = ({ isShowing }: OpeningScreenProps) => {
     //     }, 2000);
     // }, []);
 
+    useEffect(() => {
+        if(typeof document !== undefined) {
+            const opening = document.getElementById("opening");
+
+            if(!isOpeningScreenShow) {
+                setTimeout(() => {
+                    if(opening) opening.style.display = "none"
+                }, 1200);
+            }
+        }
+    }, [isOpeningScreenShow]);
+
 
     return (
         <Image
@@ -32,7 +42,7 @@ const OpeningScreen = ({ isShowing }: OpeningScreenProps) => {
             alt="idle"
             width={1080}
             height={1920}
-            data-show={isShowing}
+            data-show={isOpeningScreenShow}
             // data-show={show}
             className="absolute top-0 left-0 z-[9999] w-full data-[show=false]:scale-150 data-[show=false]:opacity-0 pointer-events-none transition-all duration-1000"
         />
