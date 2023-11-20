@@ -9,6 +9,7 @@ import Button from "./components/Button";
 import useKey from "@/hooks/useKey";
 import { singers, musicGenres } from "@/lib/data";
 import { Dirs } from "@/lib/types";
+import OpeningScreen from "./components/OpeningScreen";
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
     const refKeys = Object.keys(refs);
 
     const [ sectionSelected, setSectionSelected ] = useState("singers");
+    const [ isOpeningScreenShow, setIsOpeningScreenShow ] = useState(true);
     const dataSelected = useRef(0);
 
     useEffect(() => {
@@ -36,6 +38,7 @@ const App = () => {
     }
 
     function handleKey(dir: Dirs) {
+        if(isOpeningScreenShow) setIsOpeningScreenShow(false);
         handleChangeSection(dir, refKeys, sectionSelected, setSectionSelected, refs, dataSelected.current, handleChangeDataSelected)
     }
 
@@ -45,11 +48,9 @@ const App = () => {
     useKey("a", () => handleKey("left"));
     useKey("d", () => handleKey("right"));
 
-    //  parseInt(Math.random() * (max - min) + min)
-
     return (
         <>
-            
+            <OpeningScreen isShowing={isOpeningScreenShow}/>
 
             <main className="flex flex-col gap-10 w-full min-h-full bg-background px-8">
                 <h1 className="text-center text-4xl font-bold text-custom-blue mt-8">O que você quer descobrir hoje?</h1>
