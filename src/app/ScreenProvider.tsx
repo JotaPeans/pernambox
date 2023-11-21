@@ -1,6 +1,7 @@
 "use client"
 
 import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { NextUIProvider } from "@nextui-org/react";
 
 interface ScreenProviderProps {
     children: ReactNode
@@ -23,7 +24,9 @@ const ScreenProvider = ({ children }: ScreenProviderProps) => {
     
     return (
         <ScreenContext.Provider value={{ isOpeningScreenShow, setIsOpeningScreenShow }}>
-            { children }
+            <NextUIProvider>
+                { children }
+            </NextUIProvider>
         </ScreenContext.Provider>
     );
 }

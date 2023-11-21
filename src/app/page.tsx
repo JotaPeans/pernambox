@@ -8,7 +8,7 @@ import { ScreenContext } from "./ScreenProvider";
 import Section from "./components/Section";
 import Button from "./components/Button";
 import useKey from "@/hooks/useKey";
-import { singers, musicGenres } from "@/lib/data";
+import { singers, musicGenres, artists, artGenres } from "@/lib/data";
 import { Dirs } from "@/lib/types";
 import OpeningScreen from "./components/OpeningScreen";
 
@@ -18,11 +18,15 @@ const App = () => {
     const refs = typeof document !== "undefined" ? {
         surprise: document.getElementsByClassName("surprise"),
         singers: document.getElementsByClassName("singers"),
-        genres: document.getElementsByClassName("genres"),
+        musicGenres: document.getElementsByClassName("musicGenres"),
+        artists: document.getElementsByClassName("artists"),
+        artGenres: document.getElementsByClassName("artGenres"),
     } : {
         surprise: [],
         singers: [],
-        genres: [],
+        musicGenres: [],
+        artists: [],
+        artGenres: [],
     }
 
     const refKeys = Object.keys(refs);
@@ -67,9 +71,13 @@ const App = () => {
                     </div>
                 </div>
 
-                <Section title="Artistas" data={singers} route="/singer/" type="singers"/>
+                <Section title="Artistas Musicas" data={singers} route="/singer/" type="singers"/>
 
-                <Section title="Gêneros Musicais" data={musicGenres} route="/genre/" type="genres"/>
+                <Section title="Gêneros Musicais" data={musicGenres} route="/genre/" type="musicGenres"/>
+
+                <Section title="Artistas Plásticos" data={artists} route="/artist/" type="artists"/>
+
+                <Section title="Gêneros Artísticos" data={artGenres} route="/piece/" type="artGenres"/>
 
             </main>
         </>

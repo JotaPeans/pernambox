@@ -1,21 +1,21 @@
 "use client"
 
 import { HTMLAttributes } from "react";
-import CardButton from "./CardButton";
 import Title from "./Title";
-import { GenresProps, SingersProps, SongProps } from "@/lib/data";
+import { GenresProps, SingersArtitsProps, SongArtProps } from "@/lib/data";
 import { twMerge as tw } from "tailwind-merge"
 import { useRouter } from "next/navigation";
 
 interface SectionProps extends HTMLAttributes<HTMLElement> {
     title: string
-    data: SongProps[] | SingersProps[] | GenresProps[]
+    data: SongArtProps[] | SingersArtitsProps[] | GenresProps[]
     route: string
+    action?: () => void
     type: string
     overflow?: "scroll" | "wrap"
 }
 
-const Section = ({ title, data, route, type, overflow = "scroll", ...props }: SectionProps) => {
+const Section = ({ title, data, route, action, type, overflow = "scroll", ...props }: SectionProps) => {
     const router = useRouter();
 
     return (
@@ -28,7 +28,10 @@ const Section = ({ title, data, route, type, overflow = "scroll", ...props }: Se
                         <div key={k} className="min-w-[10rem] max-w-[14rem] min-h-[10rem] flex flex-col gap-3 justify-center items-center">
                             <button 
                                 className={type + " outline-none focus:ring-4 ring-offset-4 ring-custom-green transition-all duration-300 rounded-lg overflow-clip"}
-                                onClick={() => router.push(`${route}${d.name.split(" ").join("-").toLowerCase()}`)}
+                                onClick={() => {
+                                    if(action) action();
+                                    else router.push(`${route}${d.name.split(" ").join("-").toLowerCase()}`)
+                                }}
                             >
                                 { d.image && <img src={d.image} alt={d.name} className="h-full object-cover object-left rounded-xl"/> }
                             </button>

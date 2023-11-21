@@ -52,11 +52,11 @@ const Singer = ({ params }: { params: { singerName: string } }) => {
             <Title className="text-center text-4xl">{ singer?.name }</Title>
 
             <section className="text-justify">
-                <img src={singer?.image} alt={singer?.name} className="h-56 rounded-lg float-left mr-5 mb-2"/>
+                <img src={ singer?.image } alt={ singer?.name } className="h-56 rounded-lg float-left mr-5 mb-2"/>
 
-                {singer?.about.map((txt, k) => (
+                { singer?.about.map((txt, k) => (
                     <p key={k} className="text-justify font-medium text-zinc-600 mb-3">{txt}</p>
-                ))}
+                )) }
             </section>
 
             <Section data={songs} title="Conheça as músicas" type="song" route="/view/player/" overflow="wrap"></Section>
