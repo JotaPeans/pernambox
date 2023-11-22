@@ -61,7 +61,7 @@ const App = () => {
                 <h1 className="text-center text-4xl font-bold text-custom-blue mt-8">O que você quer descobrir hoje?</h1>
 
                 <div className="flex gap-5 items-center">
-                    <Button className="surprise max-w-fit p-3 outline-none focus:ring-4 ring-offset-2 ring-zinc-700 shadow-lg transition-all duration-300 bg-custom-green rounded-full">
+                    <Button className="shuffleButton surprise">
                         <Shuffle/>
                     </Button>
 

@@ -6,3 +6,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.shuffleButton {
+  @apply max-w-fit p-3 outline-none focus:ring-4 ring-offset-2 ring-zinc-700 shadow-lg transition-all duration-300 bg-custom-green rounded-full
+}

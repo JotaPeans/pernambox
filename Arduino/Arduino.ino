@@ -32,26 +32,11 @@ void loop() {
   rightKeyButton = digitalRead(right);
   selectKeyButton = digitalRead(select);
 
-  if(leftKeyButton == 0 ) {
-    // Serial.println("esquerda");
-    Keyboard.press('a');
-  }
-  if(upKeyButton == 0 ) {
-    // Serial.println("cima");
-    Keyboard.press('w');
-  }
-  if(downKeyButton == 0 ) {
-    // Serial.println("baixo");
-    Keyboard.press('s');
-  }
-  if(rightKeyButton == 0 ) {
-    // Serial.println("direita");
-    Keyboard.press('d');
-  }
-  if(selectKeyButton == 0 ) {
-    // Serial.println("select");
-    Keyboard.press(enterKey);
-  }
+  if (leftKeyButton == 0) Keyboard.press('a');
+  else if (upKeyButton == 0) Keyboard.press('w');
+  else if (downKeyButton == 0) Keyboard.press('s');
+  else if (rightKeyButton == 0) Keyboard.press('d');
+  else if (selectKeyButton == 0) Keyboard.press(enterKey);
 
   Keyboard.releaseAll();
 
