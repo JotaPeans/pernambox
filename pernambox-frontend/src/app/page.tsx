@@ -58,7 +58,11 @@ const App = () => {
             <OpeningScreen/>
 
             <main className="flex flex-col gap-10 w-full min-h-full bg-background px-8">
-                <h1 className="text-center text-4xl font-bold text-custom-blue mt-8">O que você quer descobrir hoje?</h1>
+                <h1 
+                    className="text-center text-4xl font-bold text-custom-blue mt-8"
+                >
+                    O que você quer descobrir hoje?
+                </h1>
 
                 <div className="flex gap-5 items-center">
                     <Button className="shuffleButton surprise">
@@ -66,18 +70,36 @@ const App = () => {
                     </Button>
 
                     <div className="font-medium">
-                        <h1 className="text-xl font-bold text-custom-blue">Surpreenda-me</h1>
-                        <h1 className="text-sm font-bold text-custom-blue">Músicas da semana</h1>
+                        <h1 className="text-xl font-bold text-custom-blue">
+                            Surpreenda-me
+                        </h1>
+                        <h1 className="text-sm font-bold text-custom-blue">
+                            Músicas da semana
+                        </h1>
                     </div>
                 </div>
 
-                <Section title="Artistas Musicas" data={singers} route="/singer/" type="singers"/>
+                <Section 
+                    title="Artistas Musicas" 
+                    data={singers} 
+                    route="/singer/" 
+                    type="singers"
+                />
 
-                <Section title="Gêneros Musicais" data={musicGenres} route="/genre/" type="musicGenres"/>
+                <Section
+                    title="Gêneros Musicais" data={musicGenres}
+                    route="/genre/" type="musicGenres"
+                />
 
-                <Section title="Artistas Plásticos" data={artists} route="/artist/" type="artists"/>
+                <Section
+                    title="Artistas Plásticos" data={artists}
+                    route="/artist/" type="artists"
+                />
 
-                <Section title="Gêneros Artísticos" data={artGenres} route="/piece/" type="artGenres"/>
+                <Section
+                    title="Gêneros Artísticos" data={artGenres}
+                    route="/piece/" type="artGenres"
+                />
 
             </main>
         </>
