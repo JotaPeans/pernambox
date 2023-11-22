@@ -6,25 +6,25 @@ import handleChangeSection from "@/lib/functions/handleChangeSection";
 import BackButton from "@/app/components/BackButton";
 import Section from "@/app/components/Section";
 import useKey from "@/hooks/useKey";
-import { singers as singersData, musicGenres } from "@/lib/data";
+import { artists as artistsData, artGenres } from "@/lib/dataset";
 import { Dirs } from "@/lib/types";
 import Title from "@/app/components/Title";
 
-const Genre = ({ params }: { params: { genreName: string } }) => {
-    const singers = singersData.filter(s => s.genre === params.genreName);
-    const musicGenre = musicGenres.find(m => m.name === params.genreName);
+const Genre = ({ params }: { params: { pieceName: string } }) => {
+    const artists = artistsData.filter(s => s.genre === params.pieceName);
+    const artGenre = artGenres.find(m => m.name === params.pieceName);
 
     const refs = typeof document !== "undefined" ? {
         back: document.getElementsByClassName("back"),
-        singers: document.getElementsByClassName("singers"),
+        artists: document.getElementsByClassName("artists"),
     } : {
         back: [],
-        singers: [],
+        artists: [],
     }
 
     const refKeys = Object.keys(refs);
 
-    const [ sectionSelected, setSectionSelected ] = useState("singers");
+    const [ sectionSelected, setSectionSelected ] = useState("artists");
     const dataSelected = useRef(0);
 
     useEffect(() => {
@@ -49,17 +49,17 @@ const Genre = ({ params }: { params: { genreName: string } }) => {
         <main className="w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
             <BackButton backUrl="/" className="bg-custom-green"/>
 
-            <Title className="text-center text-4xl">{ musicGenre?.name }</Title>
+            <Title className="text-center text-4xl">{ artGenre?.name }</Title>
 
             <section className="text-justify">
-                <img src={ musicGenre?.image } alt={ musicGenre?.name } className="h-56 rounded-lg float-left mr-5 mb-2"/>
+                <img src={ artGenre?.image } alt={ artGenre?.name } className="h-56 rounded-lg float-left mr-5 mb-2"/>
 
-                { musicGenre?.about.map((txt, k) => (
+                { artGenre?.about.map((txt, k) => (
                     <p key={k} className="text-justify font-medium text-zinc-600 mb-3">{txt}</p>
                 )) }
             </section>
 
-            <Section title="Artistas" data={singers} route="/singer/" type="singers"/>
+            <Section title="Artistas" data={artists} route="/artist/" type="artists"/>
         </main>
     );
 }

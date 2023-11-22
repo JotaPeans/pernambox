@@ -2,7 +2,7 @@
 
 import { HTMLAttributes } from "react";
 import Title from "./Title";
-import { GenresProps, SingersArtitsProps, SongArtProps } from "@/lib/data";
+import { GenresProps, SingersArtitsProps, SongArtProps } from "@/lib/dataset";
 import { twMerge as tw } from "tailwind-merge"
 import { useRouter } from "next/navigation";
 

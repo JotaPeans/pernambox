@@ -7,7 +7,7 @@ import { OnProgressProps } from "react-player/base";
 import ReactPlayer from "react-player"
 
 
-import { songs, singers } from "@/lib/data";
+import { songs, singers } from "@/lib/dataset";
 import useKey from "@/hooks/useKey";
 import BackButton from "@/app/components/BackButton";
 import Button from "@/app/components/Button";

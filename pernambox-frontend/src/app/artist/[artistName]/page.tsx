@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import handleChangeSection from "@/lib/functions/handleChangeSection";
 
-import { arts as artsData, artists } from "@/lib/data";
+import { arts as artsData, artists } from "@/lib/dataset";
 import { Dirs } from "@/lib/types";
 import BackButton from "@/app/components/BackButton";
 import Section from "@/app/components/Section";

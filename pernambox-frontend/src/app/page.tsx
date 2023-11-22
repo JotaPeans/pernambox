@@ -8,7 +8,7 @@ import { ScreenContext } from "./ScreenProvider";
 import Section from "./components/Section";
 import Button from "./components/Button";
 import useKey from "@/hooks/useKey";
-import { singers, musicGenres, artists, artGenres } from "@/lib/data";
+import { singers, musicGenres, artists, artGenres } from "@/lib/dataset";
 import { Dirs } from "@/lib/types";
 import OpeningScreen from "./components/OpeningScreen";
 
