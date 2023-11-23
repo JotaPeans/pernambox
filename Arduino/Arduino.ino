@@ -1,44 +1,38 @@
 #include <Keyboard.h>
 
-#define left 13
-#define up 12
-#define down 11
-#define right 10
-#define select 9
+#define leftKeyPin 9
+#define downKeyPin 8
+#define upKeyPin 10
+#define rightKeyPin 11
+#define enterKeyPin 12
 
-int leftKeyButton;
-int upKeyButton;
-int downKeyButton;
-int rightKeyButton;
-int selectKeyButton;
+#define enterKey KEY_KP_ENTER
 
-char enterKey = KEY_KP_ENTER;
+int leftKeyRead, downKeyRead, upKeyRead, rightKeyRead, enterKeyRead;
 
 void setup() {
-  Serial.begin(9600);
+  pinMode(leftKeyPin, INPUT_PULLUP);
+  pinMode(downKeyPin, INPUT_PULLUP);
+  pinMode(upKeyPin, INPUT_PULLUP);
+  pinMode(rightKeyPin, INPUT_PULLUP);
+  pinMode(enterKeyPin, INPUT_PULLUP);
+
   Keyboard.begin();
-  
-  pinMode(left, INPUT_PULLUP);
-  pinMode(up, INPUT_PULLUP);
-  pinMode(down, INPUT_PULLUP);
-  pinMode(right, INPUT_PULLUP);
-  pinMode(select, INPUT_PULLUP);
 }
 
 void loop() {
-  leftKeyButton = digitalRead(left);
-  upKeyButton = digitalRead(up);
-  downKeyButton = digitalRead(down);
-  rightKeyButton = digitalRead(right);
-  selectKeyButton = digitalRead(select);
+  leftKeyRead = digitalRead(leftKeyPin); 
+  downKeyRead = digitalRead(downKeyPin); 
+  upKeyRead = digitalRead(upKeyPin); 
+  rightKeyRead = digitalRead(rightKeyPin); 
+  enterKeyRead = digitalRead(enterKeyPin); 
 
-  if (leftKeyButton == 0) Keyboard.press('a');
-  else if (upKeyButton == 0) Keyboard.press('w');
-  else if (downKeyButton == 0) Keyboard.press('s');
-  else if (rightKeyButton == 0) Keyboard.press('d');
-  else if (selectKeyButton == 0) Keyboard.press(enterKey);
+  if(leftKeyRead == 0) Keyboard.press('a');
+  else if(downKeyRead == 0) Keyboard.press('s');
+  else if(upKeyRead == 0) Keyboard.press('w');
+  else if(rightKeyRead == 0) Keyboard.press('d');
+  else if(enterKeyRead == 0) Keyboard.press(enterKey);
 
   Keyboard.releaseAll();
-
-  delay(200);
+  delay(135);
 }
