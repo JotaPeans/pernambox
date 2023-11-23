@@ -10,7 +10,7 @@ import { artists as artistsData, artGenres } from "@/lib/dataset";
 import { Dirs } from "@/lib/types";
 import Title from "@/app/components/Title";
 
-const Genre = ({ params }: { params: { pieceName: string } }) => {
+const Piece = ({ params }: { params: { pieceName: string } }) => {
     const artists = artistsData.filter(s => s.genre === params.pieceName);
     const artGenre = artGenres.find(m => m.name === params.pieceName);
 
@@ -64,4 +64,4 @@ const Genre = ({ params }: { params: { pieceName: string } }) => {
     );
 }
  
-export default Genre;
+export default Piece;

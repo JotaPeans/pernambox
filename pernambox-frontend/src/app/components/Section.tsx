@@ -10,7 +10,7 @@ interface SectionProps extends HTMLAttributes<HTMLElement> {
     title: string
     data: SongArtProps[] | SingersArtitsProps[] | GenresProps[]
     route: string
-    action?: () => void
+    action?: (data: SongArtProps) => void
     type: string
     overflow?: "scroll" | "wrap"
 }
@@ -29,14 +29,14 @@ const Section = ({ title, data, route, action, type, overflow = "scroll", ...pro
                             <button 
                                 className={type + " outline-none focus:ring-4 ring-offset-4 ring-custom-green transition-all duration-300 rounded-lg overflow-clip"}
                                 onClick={() => {
-                                    if(action) action();
+                                    if(action) action(d as any);
                                     else router.push(`${route}${d.name.split(" ").join("-").toLowerCase()}`)
                                 }}
                             >
-                                { d.image && <img src={d.image} alt={d.name} className="h-full object-cover object-left rounded-xl"/> }
+                                { d.image && <img src={d.image} alt={d.name} className="h-full object-cover object-center rounded-xl"/> }
                             </button>
 
-                            <h5 className="text-custom-blue font-semibold text-xl">{ d.name }</h5>
+                            <h5 className="text-custom-blue font-semibold text-xl capitalize">{ d.name }</h5>
                         </div>
                     ))
                 }

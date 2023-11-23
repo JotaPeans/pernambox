@@ -55,7 +55,7 @@ const App = () => {
 
     return (
         <>
-            <OpeningScreen/>
+            {/* <OpeningScreen/> */}
 
             <main className="flex flex-col gap-10 w-full min-h-full bg-background px-8">
                 <h1 

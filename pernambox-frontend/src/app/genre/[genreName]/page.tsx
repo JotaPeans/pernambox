@@ -52,7 +52,7 @@ const Genre = ({ params }: { params: { genreName: string } }) => {
             <Title className="text-center text-4xl">{ musicGenre?.name }</Title>
 
             <section className="text-justify">
-                <img src={ musicGenre?.image } alt={ musicGenre?.name } className="h-56 rounded-lg float-left mr-5 mb-2"/>
+                <img src={ musicGenre?.image } alt={ musicGenre?.name } className="h-56 max-h-[14rem] rounded-lg float-left mr-5 mb-2"/>
 
                 { musicGenre?.about.map((txt, k) => (
                     <p key={k} className="text-justify font-medium text-zinc-600 mb-3">{txt}</p>
