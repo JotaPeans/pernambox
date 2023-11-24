@@ -1,6 +1,6 @@
 "use client"
 
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, useRef } from "react";
 import Title from "./Title";
 import { GenresProps, SingersArtitsProps, SongArtProps } from "@/lib/dataset";
 import { twMerge as tw } from "tailwind-merge"
@@ -17,15 +17,25 @@ interface SectionProps extends HTMLAttributes<HTMLElement> {
 
 const Section = ({ title, data, route, action, type, overflow = "scroll", ...props }: SectionProps) => {
     const router = useRouter();
+    const containerRef = useRef<HTMLDivElement>(null)
 
     return (
         <section className={tw("flex flex-col gap-4 w-full", props.className)} { ...props }>
             <Title className="text-orange-500">{ title }</Title>
 
-            <div data-overflow={overflow} className="w-full flex items-start gap-5 data-[overflow='scroll']:overflow-x-auto data-[overflow='wrap']:flex-wrap p-2">
+            <div
+                ref={containerRef}
+                data-overflow={overflow} 
+                className="w-full flex items-start gap-5 data-[overflow='scroll']:overflow-x-auto data-[overflow='wrap']:flex-wrap p-2 scrollbar scrollbar-thumb-rounded-md scrollbar-thumb-orange-500/70 scrollbar-track-rounded-md scrollbar-track-custom-yellow/30 scrollbar-h-2"
+            >
                 {
                     data.map((d, k) => (
-                        <div key={k} className="max-w-[14rem] flex flex-col gap-3 justify-center items-center">
+                        <div key={k} onFocus={() => {
+                            if(containerRef.current) {
+                                if(k === 0) containerRef.current.scrollTo(0, 0);
+                                else if(k === (data.length - 1)) containerRef.current.scrollTo(containerRef.current.scrollWidth, 0);
+                            }
+                        }} className="max-w-[14rem] flex flex-col gap-3 justify-center items-center">
                             <button 
                                 className={type + " outline-none focus:ring-4 ring-offset-4 ring-custom-green transition-all duration-300 rounded-lg overflow-clip"}
                                 onClick={() => {

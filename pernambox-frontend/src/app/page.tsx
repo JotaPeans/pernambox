@@ -8,11 +8,14 @@ import { ScreenContext } from "./ScreenProvider";
 import Section from "./components/Section";
 import Button from "./components/Button";
 import useKey from "@/hooks/useKey";
-import { singers, musicGenres, artists, artGenres } from "@/lib/dataset";
+import { singers, musicGenres, artists, artGenres, songs } from "@/lib/dataset";
 import { Dirs } from "@/lib/types";
-import OpeningScreen from "./components/OpeningScreen";
+import randomArbitrary from "@/lib/functions/random";
+import { useRouter } from "next/navigation";
 
 const App = () => {
+    const router = useRouter();
+
     const { isOpeningScreenShow, setIsOpeningScreenShow } = useContext(ScreenContext);
 
     const refs = typeof document !== "undefined" ? {
@@ -65,7 +68,10 @@ const App = () => {
                 </h1>
 
                 <div className="flex gap-5 items-center">
-                    <Button className="shuffleButton surprise">
+                    <Button className="shuffleButton surprise" onClick={() => {
+                        const randomIndex = parseInt(randomArbitrary(0, songs.length).toString())
+                        router.push(`/view/player/${songs[randomIndex].name.split(" ").join("-").toLowerCase()}`);
+                    }}>
                         <Shuffle/>
                     </Button>
 
