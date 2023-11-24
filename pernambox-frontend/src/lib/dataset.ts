@@ -209,13 +209,6 @@ export const songs: SongArtProps[] = [
         url: "https://www.youtube.com/watch?v=iRv9q0kmJpg",
         image: "https://64.media.tumblr.com/a9c01409b0b3b7c2b91fd9cb2a62c5e0/tumblr_mr67dpqfhi1rbt4ufo2_r1_1280.jpg"
     },
-    {
-        name: "Asa Branca",
-        author: "Luiz Gonzaga", 
-        genre: "forro",
-        url: "https://www.youtube.com/watch?v=MhMIsfsoymg&ab_channel=Schin",
-        image: "https://64.media.tumblr.com/a9c01409b0b3b7c2b91fd9cb2a62c5e0/tumblr_mr67dpqfhi1rbt4ufo2_r1_1280.jpg"
-    },
 
     {
         name: "Pedrinha Miudinha",
