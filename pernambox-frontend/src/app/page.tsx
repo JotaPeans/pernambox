@@ -12,6 +12,7 @@ import { singers, musicGenres, artists, artGenres, songs } from "@/lib/dataset";
 import { Dirs } from "@/lib/types";
 import randomArbitrary from "@/lib/functions/random";
 import { useRouter } from "next/navigation";
+import OpeningScreen from "./components/OpeningScreen";
 
 const App = () => {
     const router = useRouter();
@@ -58,7 +59,7 @@ const App = () => {
 
     return (
         <>
-            {/* <OpeningScreen/> */}
+            <OpeningScreen/>
 
             <main className="flex flex-col gap-10 w-full min-h-full bg-background px-8">
                 <h1 
