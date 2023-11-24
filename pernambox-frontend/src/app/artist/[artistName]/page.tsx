@@ -12,8 +12,8 @@ import useKey from "@/hooks/useKey";
 import Title from "@/app/components/Title";
 
 const Artist = ({ params }: { params: { artistName: string } }) => {
-    const arts = artsData.filter(s => s.author.toLowerCase() === params.artistName.toLowerCase());
-    const artist = artists.find(s => s.name.toLowerCase() === params.artistName.toLowerCase());
+    const arts = artsData.filter(s => s.author.toLowerCase() === params.artistName.toLowerCase().toLowerCase().split("-").join(" "));
+    const artist = artists.find(s => s.name.toLowerCase() === params.artistName.toLowerCase().toLowerCase().split("-").join(" "));
 
     const [ showArt, setShowArt ] = useState(false);
     const [ artData, setArtData ] = useState<SongArtProps | null>(null);
@@ -33,7 +33,7 @@ const Artist = ({ params }: { params: { artistName: string } }) => {
     const dataSelected = useRef(0);
 
     useEffect(() => {
-        (refs[sectionSelected as keyof typeof refs][0] as any).focus();
+        (refs[sectionSelected as keyof typeof refs][0] as any)?.focus();
     }, []);
     
     function handleChangeDataSelected(n: number) {

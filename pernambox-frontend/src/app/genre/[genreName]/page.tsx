@@ -47,7 +47,7 @@ const Genre = ({ params }: { params: { genreName: string } }) => {
 
     return (
         <main className="w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
-            <BackButton backUrl="/" className="bg-custom-green"/>
+            <BackButton backUrl="/" className="bg-custom-green ring-offset-2"/>
 
             <Title className="text-center text-4xl">{ musicGenre?.name }</Title>
 

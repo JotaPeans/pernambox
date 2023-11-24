@@ -558,7 +558,7 @@ export const singers: SingersArtitsProps[] = [
 export const arts: SongArtProps[] = [
     {
         name: "Ornamento Policromo",
-        author: "FreePik-Gravura", 
+        author: "Jessica Muniz", 
         genre: "gravura",
         image: "https://img.freepik.com/fotos-gratis/ornamento-policromo_53876-71292.jpg?w=826&t=st=1700758716~exp=1700759316~hmac=d0c772bb6458ebd57cef7a4a644296c4a740460b149ac8cbcb9c4a2943656098",
         by: "Imagem de rawpixel.com no Freepik",
@@ -566,7 +566,7 @@ export const arts: SongArtProps[] = [
     },
     {
         name: "Athene Maculate",
-        author: "FreePik-Gravura", 
+        author: "Jessica Muniz", 
         genre: "gravura",
         image: "https://img.freepik.com/fotos-gratis/coruja-malhada-athene-maculate-ilustrada-por-elizabeth-gould_53876-65161.jpg?w=740&t=st=1700760472~exp=1700761072~hmac=01b783fd732594e61f4a0295fe3406c52104434694880b9aa0c7d6a46a3872d9",
         by: "Imagem de rawpixel.com no Freepik",
@@ -574,7 +574,7 @@ export const arts: SongArtProps[] = [
     },
     {
         name: "Rosa Gravada",
-        author: "FreePik-Gravura", 
+        author: "Jessica Muniz", 
         genre: "gravura",
         image: "https://img.freepik.com/fotos-gratis/papel-de-parede-rosa-gravado-com-flores-desenhadas-a-mao-em-bw_53876-147805.jpg?w=1380&t=st=1700760572~exp=1700761172~hmac=88fadda8b660b8cb6fb576ccb46ceaba7d399c5f39884046d55156acf6a5baab",
         by: "Imagem de rawpixel.com no Freepik",
@@ -583,7 +583,7 @@ export const arts: SongArtProps[] = [
 
     {
         name: "Cenário Abstrato",
-        author: "FreePik-Pintura", 
+        author: "Robson da Silva Junior", 
         genre: "pintura",
         image: "https://img.freepik.com/fotos-gratis/cenario-abstrato-com-cores-vibrantes-de-padrao-de-ondas-multicoloridas-fluindo-suavemente-geradas-pela-inteligencia-artificial_24640-131097.jpg?w=1380&t=st=1700852887~exp=1700853487~hmac=5dadef8356dd84c564366358dc9b248e11e1a1055a292f94dd3dab3d0a34665c",
         by: "Imagem de stockgiu no Freepik",
@@ -591,7 +591,7 @@ export const arts: SongArtProps[] = [
     },
     {
         name: "Floresta em Aquarela",
-        author: "FreePik-Pintura", 
+        author: "Robson da Silva Junior", 
         genre: "pintura",
         image: "https://img.freepik.com/vetores-gratis/paisagem-de-floresta-em-aquarela_52683-77215.jpg?w=1380&t=st=1700852927~exp=1700853527~hmac=a22a414cb1cb4ca74b1f77d0dd49b7e61542c85c29dfe3b2142fea264a303e02",
         by: "Imagem de pikisuperstar no Freepik",
@@ -599,7 +599,7 @@ export const arts: SongArtProps[] = [
     },
     {
         name: "Jovem na Natureza",
-        author: "FreePik-Pintura", 
+        author: "Robson da Silva Junior", 
         genre: "pintura",
         image: "https://img.freepik.com/fotos-gratis/jovem-na-natureza-exala-elegancia-e-beleza-gerada-por-ia_188544-30661.jpg?w=1380&t=st=1700852947~exp=1700853547~hmac=458c90e27cb6af6761c318233ffaf1e48377537108383ec321f0d9025c40d0b3",
         by: "Imagem de vecstock no Freepik",
@@ -608,7 +608,7 @@ export const arts: SongArtProps[] = [
 
     {
         name: "Estátua de Mármore",
-        author: "FreePik-Escultura", 
+        author: "Bruno Bucciarati", 
         genre: "escultura",
         image: "https://img.freepik.com/fotos-gratis/foto-em-tons-de-cinza-de-uma-estatua-de-marmore-de-uma-mulher-sob-as-luzes_181624-12177.jpg?w=1380&t=st=1700852973~exp=1700853573~hmac=53b90e62ba2000bd1c69d5878454916d6b3a52115e1e2e3e41d98363d0009a65",
         by: "Imagem de wirestock no Freepik",
@@ -616,7 +616,7 @@ export const arts: SongArtProps[] = [
     },
     {
         name: "Escultura Feminina",
-        author: "FreePik-Escultura", 
+        author: "Bruno Bucciarati", 
         genre: "escultura",
         image: "https://img.freepik.com/fotos-gratis/escultura-feminina-nua-simbolo-de-beleza-e-sensualidade-gerada-por-ia_188544-13344.jpg?w=1380&t=st=1700852991~exp=1700853591~hmac=2f927c2f88d35d880f8349f52b9bc82259df9461a134eb74165cff8a640d26ea",
         by: "Imagem de vecstock no Freepik",
@@ -624,7 +624,7 @@ export const arts: SongArtProps[] = [
     },
     {
         name: "Grego no Templo",
-        author: "FreePik-Escultura", 
+        author: "Bruno Bucciarati", 
         genre: "escultura",
         image: "https://img.freepik.com/fotos-gratis/busto-grego-no-templo_23-2150719188.jpg?w=740&t=st=1700853004~exp=1700853604~hmac=a2f26d698c3af734fabc0c0e20ae88c74ece597eab24d62a2f443400147ae00d",
         by: "Imagem de Freepik",
@@ -660,30 +660,35 @@ export const artGenres: GenresProps[] = [
 
 export const artists: SingersArtitsProps[] = [
     {
-        name: "FreePik-Gravura",
+        name: "Jessica Muniz",
         genre: "gravura",
-        image: "https://www.publicitarioscriativos.com/wp-content/uploads/2020/03/freepik-oferece-3-meses-gratis-de-premium-para-profissionais-durante-a-quarentena.png",
+        image: "https://img.freepik.com/free-photo/medium-shot-smiley-woman-posing-cv_23-2149927575.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         about: [
-            "A Freepik é uma empresa especializada na criação e distribuição de recursos gráficos editáveis para facilitar, bem como contribuir com as suas ideias.",
-            "Além disso, você pode colaborar disponibilizando suas próprias criações e ganhar muitas vantagens, assim como fazer parte da equipe sendo de qualquer lugar do mundo.",
+            "Jéssica Muniz é uma artista visionária que se destaca no mundo da gravura com sua abordagem única e inovadora. Nascida de uma fusão entre as tradições artísticas e a contemporaneidade, as obras de Jéssica cativam os espectadores, levando-os a uma jornada emocional e introspectiva.",
+            "Inspirada pela natureza, pelos contrastes urbanos e pelos matizes da vida cotidiana, as gravuras de Jéssica são um testemunho de sua habilidade em capturar a essência da existência humana. Suas obras são uma celebração da diversidade e da beleza encontrada na simplicidade do quotidiano.",
+            "Sua técnica distintiva combina meticulosidade e liberdade expressiva, criando composições que são ao mesmo tempo detalhadas e impressionisticamente fluidas. Jéssica Muniz transforma simples folhas de papel em portais para mundos imaginários, onde as linhas e sombras dançam em harmonia.Seu legado na gravura é mais do que uma marca artística; é um convite para explorar as fronteiras da criatividade e da autenticidade.",
         ]
     },
     {
-        name: "FreePik-Pintura",
+        name: "Robson da Silva Junior",
         genre: "pintura",
-        image: "https://www.publicitarioscriativos.com/wp-content/uploads/2020/03/freepik-oferece-3-meses-gratis-de-premium-para-profissionais-durante-a-quarentena.png",
+        image: "https://img.freepik.com/free-photo/young-man-painting-with-acrylics_23-2148854549.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         about: [
-            "A Freepik é uma empresa especializada na criação e distribuição de recursos gráficos editáveis para facilitar, bem como contribuir com as suas ideias.",
-            "Além disso, você pode colaborar disponibilizando suas próprias criações e ganhar muitas vantagens, assim como fazer parte da equipe sendo de qualquer lugar do mundo.",
+            "Robson da Silva Junior, um pintor de alma vibrante e pincéis ágeis, traz à vida telas que transcendem a mera expressão artística. Nascido em um lar onde a paleta de cores era tão rica quanto as histórias contadas por seu pai, Robson encontrou sua musa nas lembranças que permeavam sua infância.",
+            "Seu pai, um amante da natureza e das tradições, enchia os dias de Robson com passeios pelas montanhas, banhos de riachos e noites sob um céu estrelado. As histórias sussurradas ao redor da fogueira e os tons quentes dos entardeceres moldaram não apenas sua visão de mundo, mas também sua interpretação única da arte.",
+            "As pinceladas de Robson carregam consigo a nostalgia de tardes ensolaradas e o frescor da brisa matinal. Cada obra é um testemunho das lições que seu pai lhe transmitiu, seja através da técnica apurada ou da escolha cuidadosa das cores. Seus quadros não são simples reproduções da realidade, mas sim janelas para o mundo interior de um artista que se conecta profundamente com suas raízes.",
+            "Assim, Robson da Silva Junior continua a pintar não apenas para si mesmo, mas para compartilhar com o mundo as histórias que o moldaram. Cada pincelada é um tributo à sabedoria de seu pai, uma celebração das experiências que esculpiram sua sensibilidade artística e um convite para que todos mergulhem na riqueza de suas origens através de sua visão única.",
         ]
     },
     {
-        name: "FreePik-Escultura",
+        name: "Bruno Bucciarati",
         genre: "escultura",
-        image: "https://www.publicitarioscriativos.com/wp-content/uploads/2020/03/freepik-oferece-3-meses-gratis-de-premium-para-profissionais-durante-a-quarentena.png",
+        image: "https://img.freepik.com/fotos-gratis/homem-tiro-medio-fazendo-ceramica_23-2148986302.jpg?w=996&t=st=1700866136~exp=1700866736~hmac=8b9ed7f48e08b8c6cfad66f31c545d240a54d4395723c918fbdd0bf27247da6a",
         about: [
-            "A Freepik é uma empresa especializada na criação e distribuição de recursos gráficos editáveis para facilitar, bem como contribuir com as suas ideias.",
-            "Além disso, você pode colaborar disponibilizando suas próprias criações e ganhar muitas vantagens, assim como fazer parte da equipe sendo de qualquer lugar do mundo.",
+            "Bruno Bucciarati, um mestre da cerâmica nascido sob o sol da Itália, mas cujas mãos moldaram sua própria jornada na rica terra do Brasil. Desde tenra idade, Bruno encontrou nas cores vibrantes e nas formas encantadoras das cerâmicas pernambucanas a inspiração que impulsionaria sua paixão artística.",
+            "Em sua infância, ele desembarcou nas praias brasileiras com sua família, trazendo consigo não apenas bagagem, mas também a herança da cerâmica italiana que fluía em suas veias. Foi nas ruas movimentadas e nas festas animadas do Brasil que Bruno descobriu o calor e a energia que moldariam sua arte.",
+            "As tradições da cerâmica pernambucana, com suas figuras estilizadas e cores audaciosas, tornaram-se o alicerce sobre o qual Bruno construiu seu próprio estilo distinto. Suas peças exalam a fusão única de duas culturas, uma dança harmoniosa entre a tradição italiana e a exuberância brasileira.",
+            "No estúdio de Bruno, a argila se transforma magicamente em expressões vivas da cultura que o acolheu. Seu trabalho não é apenas arte visual, mas um testemunho tangível da fusão de identidades, um tributo à diversidade que é o cerne da experiência brasileira.",
         ]
     },
 ]

@@ -83,7 +83,7 @@ const Player = ({ params }: { params: { songName: string } }) => {
         <main className="w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
             
             <div className="flex items-center gap-2">
-                <BackButton className="bg-custom-green" backUrl={`/singer/${songData?.author.split(" ").join("-")}`} keyToBack='a'/>
+                <BackButton className="bg-custom-green ring-offset-2" backUrl={`/singer/${songData?.author.split(" ").join("-")}`} keyToBack='a'/>
                 <p className="font-medium text-zinc-600">Botão da esquerda para voltar!</p>
             </div>
 
