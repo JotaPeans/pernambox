@@ -115,7 +115,7 @@ export const songs: SongArtProps[] = [
     },
 
     {
-        name: "Vinde Vinde Moços E Velhos",
+        name: "Vinde Vinde Mocos E Velhos",
         author: "Antonio Nobrega", 
         genre: "forro",
         url: "https://www.youtube.com/watch?v=imL72sxfWuo&ab_channel=AntonioN%C3%B3brega-Topic",
@@ -422,7 +422,7 @@ export const singers: SingersArtitsProps[] = [
         image: "https://i1.sndcdn.com/avatars-000690165227-dm3wat-t240x240.jpg",
         about: [
             "A ORKESTRA BANDIDA é um grupo ligado ao Coletivo Tarab, formado por músicos multi-instrumentistas, estudiosos e pesquisadores da música cigana oriental presente nas culturas do Mediterrâneo, Turquia, Trácia e Balkãns e da música regional folclórica Brasileira.",
-            "Através de uma instrumentação peculiar que inclui Oud (Alaúde clássico), Cümbüş (Banjo Fretless Cigano), Clarinetes (em G da Turquia, Grécia e Oriente Médio), Flauta Ney e Kaval (Flautas tradicionais da Turquia, Macedônia e Bulgária), Rabeca e Keman (Violino presente na música regional e folclórica tanto no Brasil como nas culturas regionais do Oriente Médio Balkan e Turquia), Sousafone (instrumento de Sopro presente nas fanfarras de rua tanto no Brasil presente nas Retretas das praças do interior como nas Fanfarras populares dos Balkans), Darbuka (presente em diversas culturas do oriente médio, Bálcãs e Mediterrâneo), Davul (Parente da Zabumba Nordestina e na música Cigana folclórica da Turquia, Macedônia, Bulgária e Egito) e Riqq (Primo do Pandeiro Brasileiro utilizado dos Balkans até o Oriente Médio).",
+            "Através de uma instrumentação peculiar que inclui Alaúde clássico, Banjo Fretless Cigano, Clarinetes, Flauta Ney e Kaval, Rabeca e Keman, Sousafone, Darbuka, Davul e Riqq.",
             "A ORKESTRA BANDIDA se utiliza das escalas orientais e ritmos diversos, como por exemplo, os ímpares, que são comuns em diversos países que compartilham essa herança musical."
         ]
     },
