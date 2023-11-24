@@ -83,7 +83,7 @@ const Artist = ({ params }: { params: { artistName: string } }) => {
             </div>
 
             <main className="w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
-                <BackButton backUrl="/" className="bg-custom-green ring-offset-2"/>
+                <BackButton backUrl={`/piece/${artist?.genre}`} className="bg-custom-green ring-offset-2"/>
 
                 <Title className="text-center text-4xl">{ artist?.name }</Title>
 

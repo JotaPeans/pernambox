@@ -28,7 +28,7 @@ const Piece = ({ params }: { params: { pieceName: string } }) => {
     const dataSelected = useRef(0);
 
     useEffect(() => {
-        (refs[sectionSelected as keyof typeof refs][0] as any).focus();
+        (refs[sectionSelected as keyof typeof refs][0] as any)?.focus();
     }, []);
     
     function handleChangeDataSelected(n: number) {

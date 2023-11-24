@@ -14,7 +14,7 @@ import Button from "@/app/components/Button";
 
 const Player = ({ params }: { params: { songName: string } }) => {
     const router = useRouter();
-    const songData = songs.find(d => d.name.toLowerCase() === params.songName.split("-").join(" "));
+    const songData = songs.find(d => d.name.toLowerCase() === params.songName.toLowerCase().split("-").join(" "));
     const singer = singers.find(s => s.name === songData?.author)
 
     if(!songData) router.push("/");
@@ -73,14 +73,17 @@ const Player = ({ params }: { params: { songName: string } }) => {
     useKey("w", () => handleVolume("up")); // tecla pra ir pra cima
     useKey("s", () => handleVolume("down")); // tecla pra ir pra baixo
 
-    useKey("a", () => router.push(`/singer/${songData?.author}`)); // tecla pra ir pra direita
-    useKey("Enter", () => setPlaying(playing => !playing)); // tecla pra ir pra esquerda
+    useKey("a", () => {
+        const author = songData?.author.split(" ").join("-");
+        router.push(`/singer/${author}`)
+    }); // tecla pra ir pra esquerda
+    useKey("Enter", () => setPlaying(playing => !playing)); // tecla de selecionar -> play pause
 
     return (
         <main className="w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
             
             <div className="flex items-center gap-2">
-                <BackButton className="bg-custom-green" backUrl={`/singer/${songData?.author}`} keyToBack='a'/>
+                <BackButton className="bg-custom-green" backUrl={`/singer/${songData?.author.split(" ").join("-")}`} keyToBack='a'/>
                 <p className="font-medium text-zinc-600">Botão da esquerda para voltar!</p>
             </div>
 
@@ -97,7 +100,7 @@ const Player = ({ params }: { params: { songName: string } }) => {
                         /> : null }
                     </div>
 
-                    <img src={songData?.image} alt={songData?.name} className="rounded-lg"/>
+                    <img src={songData?.image} alt={songData?.name} className="rounded-lg max-w-sm"/>
 
                     <div className="flex flex-col w-full">
                         <h1 className="font-semibold text-zinc-700 text-lg">{songData?.name}</h1>

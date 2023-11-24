@@ -28,7 +28,7 @@ const Genre = ({ params }: { params: { genreName: string } }) => {
     const dataSelected = useRef(0);
 
     useEffect(() => {
-        (refs[sectionSelected as keyof typeof refs][0] as any).focus();
+        (refs[sectionSelected as keyof typeof refs][0] as any)?.focus();
     }, []);
     
     function handleChangeDataSelected(n: number) {

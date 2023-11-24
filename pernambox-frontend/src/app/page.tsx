@@ -82,7 +82,7 @@ const App = () => {
                 <Section 
                     title="Artistas Musicas" 
                     data={singers} 
-                    route="/singer/" 
+                    route="/singer/"
                     type="singers"
                 />
 
