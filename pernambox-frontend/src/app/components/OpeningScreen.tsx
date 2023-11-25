@@ -5,7 +5,7 @@ import { useEffect, useContext } from "react";
 import { ScreenContext } from "../ScreenProvider";
 
 const OpeningScreen = () => {
-    const { isOpeningScreenShow } = useContext(ScreenContext);
+    const { isOpeningScreenShow, setIsOpeningScreenShow } = useContext(ScreenContext);
     // const [ show, setShow ] = useState(isShowing);
 
     // useEffect(() => {
@@ -43,6 +43,7 @@ const OpeningScreen = () => {
             width={1080}
             height={1920}
             data-show={isOpeningScreenShow}
+            onClick={() => setIsOpeningScreenShow(false)}
             // data-show={show}
             className="absolute top-0 left-0 z-[9999] w-full data-[show=false]:scale-150 data-[show=false]:opacity-0 pointer-events-none transition-all duration-1000"
         />
