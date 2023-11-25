@@ -47,7 +47,7 @@ const OpeningScreen = () => {
                 if(setIsOpeningScreenShow) setIsOpeningScreenShow(false);
             }}
             // data-show={show}
-            className="absolute top-0 left-0 z-[9999] w-full data-[show=false]:scale-150 data-[show=false]:opacity-0 pointer-events-none transition-all duration-1000"
+            className="absolute top-0 left-0 z-[9999] w-full data-[show=false]:scale-150 data-[show=false]:opacity-0 data-[show=false]:pointer-events-none transition-all duration-1000"
         />
     );
 }
