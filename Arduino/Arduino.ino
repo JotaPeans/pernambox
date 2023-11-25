@@ -8,6 +8,8 @@
 
 #define enterKey KEY_KP_ENTER
 
+int delayT = 500;
+
 int leftKeyRead, downKeyRead, upKeyRead, rightKeyRead, enterKeyRead;
 
 void setup() {
@@ -27,12 +29,31 @@ void loop() {
   rightKeyRead = digitalRead(rightKeyPin); 
   enterKeyRead = digitalRead(enterKeyPin); 
 
-  if(leftKeyRead == 0) Keyboard.press('a');
-  else if(downKeyRead == 0) Keyboard.press('s');
-  else if(upKeyRead == 0) Keyboard.press('w');
-  else if(rightKeyRead == 0) Keyboard.press('d');
-  else if(enterKeyRead == 0) Keyboard.press(enterKey);
+  if(leftKeyRead == 0) {
+    Keyboard.press('a');
+    Keyboard.releaseAll();
+    delay(delayT);
+  }
+  else if(downKeyRead == 0) {
+    Keyboard.press('s');
+    Keyboard.releaseAll();
+    delay(delayT);
+  }
+  else if(upKeyRead == 0) {
+    Keyboard.press('w');
+    Keyboard.releaseAll();
+    delay(delayT);
+  }
+  else if(rightKeyRead == 0) {
+    Keyboard.press('d');
+    Keyboard.releaseAll();
+    delay(delay);
+  }
+  else if(enterKeyRead == 0) {
+    Keyboard.press(enterKey);
+    Keyboard.releaseAll();
+    delay(delay);
+  }
 
   Keyboard.releaseAll();
-  delay(135);
 }
