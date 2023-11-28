@@ -16,7 +16,15 @@ A pasta `pernambox-frontend` está o código fonte do frontend do site usado par
 
 ---
 
-> Passo 1, instalando dependências:
+> Passo 1; Entrando no diretório:
+```bash
+# No terminal digite:
+cd pernambox-frontend
+```
+
+---
+
+> Passo 2; Instalando dependências:
 ```bash
 npm install
 # or
@@ -25,7 +33,7 @@ yarn
 
 ---
 
-> Passo 2, executando o servidor de desenvolvimento:
+> Passo 3; Executando o servidor de desenvolvimento:
 
 ```bash
 npm run dev
