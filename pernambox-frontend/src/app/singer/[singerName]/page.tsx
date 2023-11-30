@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import handleChangeSection from "@/lib/functions/handleChangeSection";
 
 import { songs as songsData, singers } from "@/lib/dataset";
@@ -46,7 +47,7 @@ const Singer = ({ params }: { params: { singerName: string } }) => {
     useKey("d", () => handleKey("right"));
 
     return (
-        <main className="w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
+        <main className="relative w-full min-h-full bg-background flex flex-col justify-center gap-10 pt-5 p-12 z-0">
             <BackButton backUrl={`/genre/${singer?.genre}`} className="bg-custom-green ring-offset-2"/>
 
             <Title className="text-center text-4xl">{ singer?.name }</Title>
@@ -60,6 +61,11 @@ const Singer = ({ params }: { params: { singerName: string } }) => {
             </section>
 
             <Section data={songs} title="Conheça as músicas" type="song" route="/view/player/" overflow="wrap"></Section>
+
+            <div className="flex flex-col items-center gap-2 ml-auto">
+                <Image src={`/${singer?.name}.png`} alt={singer?.name ?? ""} width={150} height={150} className="shadow-lg"></Image>
+                <h2 className="w-48 text-center text-lg font-semibold text-zinc-700">Conheça mais do Artista escaneando o QR Code acima!</h2>
+            </div>
         </main>
     );
 }

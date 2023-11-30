@@ -557,76 +557,76 @@ export const singers: SingersArtitsProps[] = [
 
 export const arts: SongArtProps[] = [
     {
-        name: "Ornamento Policromo",
+        name: "Apontar",
         author: "Jessica Muniz", 
         genre: "gravura",
-        image: "https://img.freepik.com/fotos-gratis/ornamento-policromo_53876-71292.jpg?w=826&t=st=1700758716~exp=1700759316~hmac=d0c772bb6458ebd57cef7a4a644296c4a740460b149ac8cbcb9c4a2943656098",
+        image: "https://img.freepik.com/free-vector/black-white-aztec-elements_1020-1124.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=sph",
         by: "Imagem de rawpixel.com no Freepik",
         byUrl: "br.freepik.com/fotos-gratis/ornamento-policromo_3686801.htm#query=gravura%20arte&position=1&from_view=search&track=ais&uuid=c2db94f1-bde2-4a7c-9765-d86c9ee3d260"
     },
     {
-        name: "Athene Maculate",
+        name: "Volucres",
         author: "Jessica Muniz", 
         genre: "gravura",
-        image: "https://img.freepik.com/fotos-gratis/coruja-malhada-athene-maculate-ilustrada-por-elizabeth-gould_53876-65161.jpg?w=740&t=st=1700760472~exp=1700761072~hmac=01b783fd732594e61f4a0295fe3406c52104434694880b9aa0c7d6a46a3872d9",
+        image: "https://img.freepik.com/premium-vector/set-birds-various-sizes-woodcut-style-cordel-literature_666452-196.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=sph",
         by: "Imagem de rawpixel.com no Freepik",
         byUrl: "br.freepik.com/fotos-gratis/ornamento-policromo_3686801.htm#query=gravura%20arte&position=1&from_view=search&track=ais&uuid=c2db94f1-bde2-4a7c-9765-d86c9ee3d260"
     },
     {
-        name: "Rosa Gravada",
+        name: "Nami",
         author: "Jessica Muniz", 
         genre: "gravura",
-        image: "https://img.freepik.com/fotos-gratis/papel-de-parede-rosa-gravado-com-flores-desenhadas-a-mao-em-bw_53876-147805.jpg?w=1380&t=st=1700760572~exp=1700761172~hmac=88fadda8b660b8cb6fb576ccb46ceaba7d399c5f39884046d55156acf6a5baab",
+        image: "https://img.freepik.com/free-vector/vintage-diagonal-stripes-pattern-background-vector-remix-from-artworks-by-samuel-jessurun-de-mesquita_53876-127881.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=sph",
         by: "Imagem de rawpixel.com no Freepik",
         byUrl: "br.freepik.com/fotos-gratis/ornamento-policromo_3686801.htm#query=gravura%20arte&position=1&from_view=search&track=ais&uuid=c2db94f1-bde2-4a7c-9765-d86c9ee3d260"
     },
 
     {
-        name: "Cenário Abstrato",
+        name: "Saudade",
         author: "Robson da Silva Junior", 
         genre: "pintura",
-        image: "https://img.freepik.com/fotos-gratis/cenario-abstrato-com-cores-vibrantes-de-padrao-de-ondas-multicoloridas-fluindo-suavemente-geradas-pela-inteligencia-artificial_24640-131097.jpg?w=1380&t=st=1700852887~exp=1700853487~hmac=5dadef8356dd84c564366358dc9b248e11e1a1055a292f94dd3dab3d0a34665c",
+        image: "https://img.freepik.com/free-vector/beach-background-color-pencil-illustration_53876-100533.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         by: "Imagem de stockgiu no Freepik",
         byUrl: "https://br.freepik.com/fotos-gratis/cenario-abstrato-com-cores-vibrantes-de-padrao-de-ondas-multicoloridas-fluindo-suavemente-geradas-pela-inteligencia-artificial_76317886.htm#query=pinturas&position=0&from_view=search&track=sph&uuid=e9958edc-3b2b-494b-9a64-462d82cf17a7"
     },
     {
-        name: "Floresta em Aquarela",
+        name: "Pinceladas da alma",
         author: "Robson da Silva Junior", 
         genre: "pintura",
-        image: "https://img.freepik.com/vetores-gratis/paisagem-de-floresta-em-aquarela_52683-77215.jpg?w=1380&t=st=1700852927~exp=1700853527~hmac=a22a414cb1cb4ca74b1f77d0dd49b7e61542c85c29dfe3b2142fea264a303e02",
+        image: "https://img.freepik.com/free-photo/close-up-photo-oil-paints-canvas-wall_176420-2849.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         by: "Imagem de pikisuperstar no Freepik",
         byUrl: "https://br.freepik.com/vetores-gratis/paisagem-de-floresta-em-aquarela_20287827.htm?query=pinturas"
     },
     {
-        name: "Jovem na Natureza",
+        name: "Abstrato",
         author: "Robson da Silva Junior", 
         genre: "pintura",
-        image: "https://img.freepik.com/fotos-gratis/jovem-na-natureza-exala-elegancia-e-beleza-gerada-por-ia_188544-30661.jpg?w=1380&t=st=1700852947~exp=1700853547~hmac=458c90e27cb6af6761c318233ffaf1e48377537108383ec321f0d9025c40d0b3",
+        image: "https://img.freepik.com/free-photo/abstract-art-background-wallpaper-textured-acrylic-paint-with-mixed-colors_53876-134358.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         by: "Imagem de vecstock no Freepik",
         byUrl: "https://br.freepik.com/fotos-gratis/jovem-na-natureza-exala-elegancia-e-beleza-gerada-por-ia_42180318.htm#query=pessoa%20em%20realismo%20pintura&position=32&from_view=search&track=ais&uuid=0db63490-64e5-43e2-99b6-a59866652ea8"
     },
 
     {
-        name: "Estátua de Mármore",
+        name: "Amarelo",
         author: "Bruno Bucciarati", 
         genre: "escultura",
-        image: "https://img.freepik.com/fotos-gratis/foto-em-tons-de-cinza-de-uma-estatua-de-marmore-de-uma-mulher-sob-as-luzes_181624-12177.jpg?w=1380&t=st=1700852973~exp=1700853573~hmac=53b90e62ba2000bd1c69d5878454916d6b3a52115e1e2e3e41d98363d0009a65",
+        image: "https://img.freepik.com/free-photo/minimal-modern-vases-arrangement_23-2149681088.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         by: "Imagem de wirestock no Freepik",
         byUrl: "https://br.freepik.com/fotos-gratis/foto-em-tons-de-cinza-de-uma-estatua-de-marmore-de-uma-mulher-sob-as-luzes_9991795.htm#page=2&query=escultura%20arte&position=47&from_view=search&track=ais&uuid=99c787eb-cdb0-44cd-beab-69533d57e843"
     },
     {
-        name: "Escultura Feminina",
+        name: "Peças Diversas",
         author: "Bruno Bucciarati", 
         genre: "escultura",
-        image: "https://img.freepik.com/fotos-gratis/escultura-feminina-nua-simbolo-de-beleza-e-sensualidade-gerada-por-ia_188544-13344.jpg?w=1380&t=st=1700852991~exp=1700853591~hmac=2f927c2f88d35d880f8349f52b9bc82259df9461a134eb74165cff8a640d26ea",
+        image: "https://img.freepik.com/free-photo/top-view-clay-pots-arrangement_23-2149644947.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         by: "Imagem de vecstock no Freepik",
         byUrl: "https://br.freepik.com/fotos-gratis/escultura-feminina-nua-simbolo-de-beleza-e-sensualidade-gerada-por-ia_41147116.htm#page=3&query=escultura%20arte&position=8&from_view=search&track=ais&uuid=18dada9c-3527-469e-8127-210d94fc56b5"
     },
     {
-        name: "Grego no Templo",
+        name: "Dupla",
         author: "Bruno Bucciarati", 
         genre: "escultura",
-        image: "https://img.freepik.com/fotos-gratis/busto-grego-no-templo_23-2150719188.jpg?w=740&t=st=1700853004~exp=1700853604~hmac=a2f26d698c3af734fabc0c0e20ae88c74ece597eab24d62a2f443400147ae00d",
+        image: "https://img.freepik.com/free-photo/front-view-two-vases_23-2148816286.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         by: "Imagem de Freepik",
         byUrl: "https://br.freepik.com/fotos-gratis/busto-grego-no-templo_61131236.htm#page=4&query=escultura%20arte&position=10&from_view=search&track=ais&uuid=d7316af4-3761-44fc-a6cc-a70e0be30960"
     },
@@ -635,25 +635,26 @@ export const arts: SongArtProps[] = [
 export const artGenres: GenresProps[] = [
     {
         name: "gravura",
-        image: "https://img.freepik.com/fotos-gratis/jovem-trabalhando-em-uma-oficina-de-gravura-em-madeira_23-2149185411.jpg?w=1380&t=st=1700760990~exp=1700761590~hmac=45b8954967d1031ce68d244ae234634dec6fdaaa7f40459f476894f9a5653fb0",
+        image: "https://img.freepik.com/free-photo/close-up-person-working-engraving_23-2149286547.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         about: [
-            "Gravura é o termo que designa, em geral, desenhos feitos em superfícies duras - como madeira, pedra e metal - com base em incisões, corrosões e talhos realizados com instrumentos e materiais especiais."
+            "A gravura é uma forma de expressão artística que envolve a criação de imagens em uma superfície plana, geralmente de metal, madeira, pedra ou outro material, através da incisão, corrosão, ou aplicação de tinta. Essa técnica permite a reprodução da imagem em papel ou outro suporte, tornando possível a produção de múltiplas cópias da mesma obra. A gravura possui uma longa história e desempenha um papel significativo na arte e na cultura, tanto globalmente quanto localmente.",
+            "Em Pernambuco, a gravura tem uma importância destacada, sendo parte integrante da rica tradição cultural e artística do estado. A influência da gravura em Pernambuco remonta ao período colonial, quando as técnicas de impressão foram introduzidas pelos colonizadores europeus. Desde então, a gravura tem evoluído e se adaptado, refletindo as mudanças na sociedade pernambucana."
         ],
     },
     {
         name: "pintura",
-        image: "https://img.freepik.com/fotos-gratis/close-up-de-tintas-a-oleo-e-pinceis-na-paleta_176420-2835.jpg?w=1380&t=st=1700761130~exp=1700761730~hmac=0da6711bb99bca33a54849f741b761ddd9845497b4459eb2b0601186a49338a1",
+        image: "https://img.freepik.com/free-photo/close-up-hands-holding-different-brushes_23-2149050547.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         about: [
-            "Pintura é uma técnica que utiliza pigmentos em forma líquida para colorir uma superfície, atribuindo tons e texturas, esta superfície pode ser tela, papel ou parede.",
-            "A pintura é diferente do desenho por usar pigmentos líquidos. A cor é o elemento essencial da pintura."
+            "A pintura é uma forma de expressão artística que utiliza pigmentos coloridos para criar imagens em uma superfície, como tela, papel, madeira ou parede. Ao longo da história, a pintura tem desempenhado um papel fundamental na comunicação cultural, na representação de ideias e na expressão individual. Ela abrange uma ampla variedade de estilos, técnicas e escolas artísticas, proporcionando um meio diversificado para os artistas explorarem suas visões e emoções.",
+            "Em Pernambuco, a pintura desempenha um papel significativo na preservação e na transmissão da rica herança cultural do estado. A região nordeste do Brasil é conhecida por sua vibrante cena artística, e Pernambuco destaca-se por suas tradições culturais únicas, que incluem o frevo, o maracatu, o bolo de rolo e muitas outras manifestações artísticas e folclóricas."
         ],
     },
     {
         name: "escultura",
-        image: "https://img.freepik.com/fotos-gratis/fundo-estetico-do-busto-grego_23-2150705125.jpg?w=1380&t=st=1700761170~exp=1700761770~hmac=0240a555544db31444f6488db8aaf532dd67ead129487674140aaf9db478a437",
+        image: "https://img.freepik.com/free-photo/assortment-pottery-elements-workshop_23-2148846453.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         about: [
-            "Escultura é uma forma de expressão artística que consiste na manipulação da matéria com intenção de criar formas tridimensionais.",
-            "Toda peça escultórica supõe um volume no espaço, que tem valor tanto em si mesmo como em sua relação com o entorno."
+            "A escultura é uma forma de arte tridimensional que envolve a criação de formas e figuras através da manipulação de materiais como pedra, madeira, metal, argila ou outros elementos. Ela é uma expressão artística que existe desde tempos imemoriais e desempenha um papel significativo na cultura de diversas sociedades ao redor do mundo. No contexto de Pernambuco, a escultura é uma manifestação artística que tem desempenhado um papel vital na representação da identidade cultural e na preservação da história da região.",
+            "A importância da escultura em Pernambuco é multifacetada. Em primeiro lugar, ela serve como um meio de preservação da rica herança cultural do estado. Através das esculturas, artistas pernambucanos capturam e perpetuam elementos importantes da história, tradições e identidade local. Esculturas podem representar figuras históricas, eventos marcantes ou símbolos culturais, ajudando a manter viva a memória coletiva da comunidade."
         ],
     },
 ]
@@ -683,7 +684,7 @@ export const artists: SingersArtitsProps[] = [
     {
         name: "Bruno Bucciarati",
         genre: "escultura",
-        image: "https://img.freepik.com/fotos-gratis/homem-tiro-medio-fazendo-ceramica_23-2148986302.jpg?w=996&t=st=1700866136~exp=1700866736~hmac=8b9ed7f48e08b8c6cfad66f31c545d240a54d4395723c918fbdd0bf27247da6a",
+        image: "https://img.freepik.com/free-photo/mature-smiling-shoemaker-workshop_171337-12246.jpg?size=626&ext=jpg&uid=R116221194&ga=GA1.1.2004084372.1698098800&semt=ais",
         about: [
             "Bruno Bucciarati, um mestre da cerâmica nascido sob o sol da Itália, mas cujas mãos moldaram sua própria jornada na rica terra do Brasil. Desde tenra idade, Bruno encontrou nas cores vibrantes e nas formas encantadoras das cerâmicas pernambucanas a inspiração que impulsionaria sua paixão artística.",
             "Em sua infância, ele desembarcou nas praias brasileiras com sua família, trazendo consigo não apenas bagagem, mas também a herança da cerâmica italiana que fluía em suas veias. Foi nas ruas movimentadas e nas festas animadas do Brasil que Bruno descobriu o calor e a energia que moldariam sua arte.",

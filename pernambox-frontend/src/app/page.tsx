@@ -48,20 +48,24 @@ const App = () => {
 
     function handleKey(dir: Dirs) {
         if(isOpeningScreenShow && setIsOpeningScreenShow) setIsOpeningScreenShow(false);
-        handleChangeSection(dir, refKeys, sectionSelected, setSectionSelected, refs, dataSelected.current, handleChangeDataSelected)
-    }
+        handleChangeSection(dir, refKeys, sectionSelected, setSectionSelected, refs, dataSelected.current, handleChangeDataSelected);
 
+    }
+    
     useKey("w", () => handleKey("up"));
     useKey("s", () => handleKey("down"));
-
+    
     useKey("a", () => handleKey("left"));
     useKey("d", () => handleKey("right"));
+    
+    if(sectionSelected === "artGenres") window?.scrollTo(0, window.outerHeight)
+    else if(sectionSelected === "surprise") window?.scrollTo(0, 0)
 
     return (
         <>
             <OpeningScreen/>
 
-            <main className="flex flex-col gap-10 w-full min-h-full bg-background px-8">
+            <main data-openingscreen={isOpeningScreenShow} className="flex flex-col gap-10 w-full min-h-full bg-background px-8 data-[openingscreen=true]:hidden">
                 <h1 
                     className="text-center text-4xl font-bold text-custom-blue mt-8"
                 >
