@@ -322,7 +322,7 @@ export const songs: SongArtProps[] = [
         image: "https://discografia.discosdobrasil.com.br/storage/capas/DI07300.jpg"
     },
     {
-        name: "Coração Em Desalinho",
+        name: "Coracao Em Desalinho",
         author: "Zeca Pagodinho", 
         genre: "samba",
         url: "https://www.youtube.com/watch?v=5nlX1yEkqDU&ab_channel=ZecaPagodinhoVEVO",
