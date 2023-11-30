@@ -26,7 +26,7 @@ const Section = ({ title, data, route, action, type, overflow = "scroll", ...pro
             <div
                 ref={containerRef}
                 data-overflow={overflow} 
-                className="w-full flex items-start gap-5 data-[overflow='scroll']:overflow-x-auto data-[overflow='wrap']:flex-wrap p-2 scrollbar scrollbar-thumb-rounded-md scrollbar-thumb-orange-500/70 scrollbar-track-rounded-md scrollbar-track-custom-yellow/30 scrollbar-h-2"
+                className="w-full flex items-start gap-5 data-[overflow='scroll']:overflow-x-auto data-[overflow='wrap']:flex-wrap p-4 scrollbar scrollbar-thumb-rounded-md scrollbar-thumb-orange-500/70 scrollbar-track-rounded-md scrollbar-track-custom-yellow/30 scrollbar-h-2"
             >
                 {
                     data.map((d, k) => (
@@ -37,7 +37,7 @@ const Section = ({ title, data, route, action, type, overflow = "scroll", ...pro
                             }
                         }} className="max-w-[14rem] flex flex-col gap-3 justify-center items-center">
                             <button 
-                                className={type + " outline-none focus:ring-4 ring-offset-4 ring-custom-green transition-all duration-300 rounded-lg overflow-clip"}
+                                className={type + " outline-none focus:ring-[6px] ring-offset-[5px] ring-custom-green transition-all duration-300 rounded-lg overflow-clip"}
                                 onClick={() => {
                                     if(action) action(d as any);
                                     else router.push(`${route}${d.name.split(" ").join("-").toLowerCase()}`)
